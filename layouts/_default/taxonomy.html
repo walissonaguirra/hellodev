@@ -4,9 +4,9 @@
   <ul>
     {{- range .Data.Terms.Alphabetical }}
     <li>
-      <h3 class="post-title-custom">
+      <h2 class="post-title-custom">
         <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
-      </h3>
+      </h2>
     </li>
     {{- end }}
   </ul>

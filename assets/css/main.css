@@ -518,9 +518,25 @@ header > .wrapper {
   border-top: 4px solid #9b59b6; }
 
 .post-title-custom {
+  font-size: 1.17em;
   letter-spacing: -.5px;
   line-height: 1.1;
   font-weight: 300; }
+
+.year-heading {
+  font-size: 2em; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap; }
 
 hr {
   height: 1px;
