@@ -1,4 +1,31 @@
 /**
+ * Fonts
+ */
+@font-face {
+  font-family: "Bitter";
+  src: url("/fonts/bitter-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Bitter";
+  src: url("/fonts/bitter-latin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap; }
+
+/* Metrics-adjusted fallback so the swap from Georgia → Bitter
+   doesn't shift layout (x-height, ascent/descent calibrated to Bitter v40). */
+@font-face {
+  font-family: "Bitter Fallback";
+  src: local("Georgia");
+  size-adjust: 104%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%; }
+
+/**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
@@ -11,7 +38,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic, "Malgun Gothic", Dotum, sans-serif;
+  font: 400 16px/1.5 Bitter, "Bitter Fallback", Georgia, Cambria, "Times New Roman", Times, serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
