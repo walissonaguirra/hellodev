@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="home">
+  <h1 class="post-title">{{ .Title }}</h1>
+  <ul>
+    {{- range .Data.Terms.Alphabetical }}
+    <li>
+      <h3 class="post-title-custom">
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+      </h3>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}
