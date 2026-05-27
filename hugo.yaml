@@ -1,0 +1,54 @@
+baseURL: https://walissonaguirra.dev/
+locale: pt-br
+defaultContentLanguage: pt-br
+title: Walisson Aguirra
+enableRobotsTXT: true
+enableEmoji: true
+
+params:
+  description: Engenheiro de software com foco em backend e arquitetura de aplicações, Go Lang e PHP
+  author: Walisson Aguirra
+  email: walissonaguirra@proton.me
+  copyright: "Walisson Aguirra"
+
+menu:
+  main:
+    - name: Blog
+      url: /
+      weight: 1
+    - name: Bio
+      pageRef: /bio
+      weight: 2
+    - name: Codeberg
+      url: "https://codeberg.org/walissonaguirra"
+      weight: 3
+    - name: RSS
+      url: /index.xml
+      weight: 4
+
+permalinks:
+  post: /blog/:slug/
+
+taxonomies:
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: false
+    noClasses: false
+    tabWidth: 2
+
+outputs:
+  home:
+    - HTML
+    - RSS
+
+security:
+  http:
+    urls:
+      - '^https://cdn\.jsdelivr\.net/'
+      - '^https://cdn\.walissonaguirra\.dev/'
