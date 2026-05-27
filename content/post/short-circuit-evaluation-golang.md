@@ -3,7 +3,7 @@ title: "Short Circuit Evaluation em Golang"
 date: 2026-04-19T21:00:00-03:00
 draft: false
 description: "Como o Go interrompe a avaliação de expressões booleanas assim que o resultado é definido."
-tags: ["Golang"]
+tags: ["golang"]
 ---
 
 Hoje, enquanto pesquisava referências sobre noções de lógica, acabei me deparando com um termo que ainda não conhecia: *Short Circuit Evaluation*.

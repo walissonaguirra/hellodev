@@ -2,8 +2,8 @@
 title: "Protocolo Http"
 date: 2026-05-01T12:00:00-03:00
 draft: true
-description: ""
-tags: ["protocolo", "http", "Protocolo Http"]
+description: "Como o protocolo HTTP funciona: estrutura de requisições e respostas, versões, headers e boas práticas de segurança."
+tags: ["protocolo", "http"]
 ---
 
 ### O que o Protolo HTTP
