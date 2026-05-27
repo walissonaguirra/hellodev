@@ -21,6 +21,9 @@
   {{- $htmx := resources.GetRemote "https://cdn.jsdelivr.net/npm/htmx.org@2.0.4/dist/htmx.min.js" | resources.Fingerprint -}}
   <script defer src="{{ $htmx.RelPermalink }}" integrity="{{ $htmx.Data.Integrity }}" crossorigin="anonymous"></script>
 
+  {{- $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "/index.xml" | absURL }}">
   <link rel="icon" type="image/png" href="/favicon.png">
