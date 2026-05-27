@@ -502,16 +502,26 @@ hr {
   background-color: #e8e8e8; }
 
 /*
-Footer social icons — SVG sized to match the original FontAwesome 2em icons
+Footer layout
  */
+.site-footer .footer-line {
+  margin-bottom: 6px; }
+
+.site-footer .footer-meta {
+  font-size: 13px; }
+
+.site-footer .footer-meta .sep {
+  margin: 0 6px;
+  color: #c0c0c0; }
+
 .site-footer .social {
-  display: inline-block;
-  margin-top: 4px; }
+  margin-top: 12px;
+  margin-bottom: 0; }
 
 .site-footer .social a {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 4px;
+  margin: 0 6px;
   color: #828282; }
 
 .site-footer .social a:hover {
