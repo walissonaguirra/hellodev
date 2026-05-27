@@ -13,7 +13,12 @@
 
     <nav class="site-nav">
       {{- range site.Menus.main }}
-        <a class="page-link" href="{{ .URL }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+        {{- $external := hasPrefix .URL "http" -}}
+        {{- $feed := strings.HasSuffix .URL ".xml" -}}
+        <a class="page-link" href="{{ .URL }}"
+          {{- if $external }} target="_blank" rel="noopener"{{ end -}}
+          {{- if $feed }} hx-boost="false"{{ end -}}
+        >{{ .Name }}</a>
       {{- end }}
     </nav>
   </div>
