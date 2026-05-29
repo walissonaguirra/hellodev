@@ -1,5 +1,16 @@
 {{ define "main" }}
 <div class="home">
+  {{- if eq .Kind "term" }}
+  <h1 class="page-heading">Posts marcados com “{{ .Title }}”</h1>
+  <ul class="post-archives">
+    {{- range .Pages }}
+    <li>
+      <span class="post-meta">{{ .Date | time.Format "2 de January, 2006" }}</span>
+      <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
   <h1 class="post-title">{{ .Title }}</h1>
   <ul>
     {{- range .Data.Terms.Alphabetical }}
@@ -10,5 +21,6 @@
     </li>
     {{- end }}
   </ul>
+  {{- end }}
 </div>
 {{ end }}
