@@ -576,6 +576,37 @@ Footer layout
   display: block; }
 
 /*
+Error page (404)
+ */
+.error-page {
+  padding: 40px 0 60px;
+  text-align: center; }
+
+.error-page .error-code {
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: #e8e8e8;
+  margin-bottom: 10px; }
+
+.error-page .post-title {
+  margin-bottom: 20px; }
+
+.error-page .error-message {
+  font-size: 18px;
+  color: #828282;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.error-page .error-actions {
+  margin-top: 30px; }
+
+@media screen and (max-width: 800px) {
+  .error-page .error-code {
+    font-size: 72px; } }
+
+/*
 About / bio
  */
 .about-bio {

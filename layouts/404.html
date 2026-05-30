@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="error-page">
+  <p class="error-code">404</p>
+  <h1 class="post-title">Página não encontrada</h1>
+  <p class="error-message">
+    O endereço que você acessou não existe, foi movido ou nunca esteve aqui.
+  </p>
+  <p class="error-actions">
+    <a href="{{ "/" | relURL }}">Voltar para o blog</a>
+  </p>
+</div>
+{{ end }}
