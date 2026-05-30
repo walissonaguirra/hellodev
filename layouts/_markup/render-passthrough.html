@@ -1,0 +1,12 @@
+{{- /* output "htmlAndMathml": gera a renderização visual do KaTeX (com as fontes
+   do KaTeX) + MathML para acessibilidade, igual ao antigo render client-side.
+   O padrão do transform.ToMath é só MathML, que o navegador renderiza com fonte
+   própria e fica desproporcional ao texto. */ -}}
+{{- $opts := dict "throwOnError" false "displayMode" (eq .Type "block") "output" "htmlAndMathml" -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- errorf "Falha ao renderizar matemática com transform.ToMath: %s (%s)" . $.Position -}}
+  {{- else -}}
+    {{- .Value -}}
+  {{- end -}}
+{{- end -}}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.Lang }}">
 {{ partial "head.html" . }}
-<body hx-boost="true" hx-target="main" hx-select="main" hx-swap="outerHTML show:window:top">
+<body hx-boost="true" hx-ext="head-support" hx-target="main" hx-select="main" hx-swap="outerHTML show:window:top">
   {{ partial "header.html" . }}
 
   <main class="page-content" aria-label="Content">
