@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="home">
   <h1 class="visually-hidden">{{ site.Title }} — Blog</h1>
-  {{- $posts := where site.RegularPages "Section" "post" -}}
+  {{- $posts := where (where site.RegularPages "Section" "post") "Params.unlisted" "!=" true -}}
   {{- $byYear := $posts.GroupByDate "2006" -}}
   {{- range $byYear }}
     <h2 class="year-heading" id="{{ .Key }}-ref">{{ .Key }}</h2>

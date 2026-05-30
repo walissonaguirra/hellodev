@@ -24,11 +24,11 @@ Abaixo, listo todo o conteúdo que será estudado. Conforme eu avançar, atualiz
 
 ### Noções de Lógica
 
-- Noções de Lógica
+- [Noções de Lógica]({{< ref "nocoes-de-logica.md" >}})
 
 ### Conjuntos e Operações Básicas
 
-- Operações Fundamentais
+- [Operações Fundamentais]({{< ref "operacoes-fundamentais.md" >}})
 - Bases Numéricas
 - Números Primos
 - Números Inteiros, Frações e Números Racionais

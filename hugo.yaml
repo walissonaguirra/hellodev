@@ -4,6 +4,7 @@ defaultContentLanguage: pt-br
 title: Walisson Aguirra
 enableRobotsTXT: true
 enableEmoji: true
+removePathAccents: true
 
 frontmatter:
   lastmod:
