@@ -1,14 +1,29 @@
 {{ define "main" }}
 <div class="home">
-  <h1 class="post-title">{{ .Title }}</h1>
-  <ul>
-    {{- range .Data.Terms.Alphabetical }}
+  {{- if eq .Kind "term" }}
+  <h1 class="page-heading">Arquivo da tag '{{ .Title }}'</h1>
+  <ul class="post-archives">
+    {{- range .Pages }}
     <li>
-      <h2 class="post-title-custom">
-        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+      <span class="post-meta">{{ .Date | time.Format "2 de January, 2006" }}{{ with .Params.tags }} &bull; {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ printf "/tags/%s/" (urlize $t) | relURL }}">{{ $t }}</a>{{ end }}{{ end }}</span>
+      <h2>
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
     </li>
     {{- end }}
   </ul>
+  {{- else }}
+  <h1 class="page-heading">{{ .Title }}</h1>
+  <ul class="post-archives">
+    {{- range .Data.Terms.Alphabetical }}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        <span class="post-meta">({{ .Count }})</span>
+      </h2>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
 </div>
 {{ end }}
