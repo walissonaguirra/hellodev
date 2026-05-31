@@ -29,7 +29,7 @@ Abaixo, listo todo o conteúdo que será estudado. Conforme eu avançar, atualiz
 ### Conjuntos e Operações Básicas
 
 - [Operações Fundamentais]({{< ref "operacoes-fundamentais.md" >}})
-- Bases Numéricas
+- [Bases Numéricas]({{< ref "bases-numericas.md" >}})
 - Números Primos
 - Números Inteiros, Frações e Números Racionais
 - Aritmética com Frações
