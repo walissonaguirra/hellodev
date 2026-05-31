@@ -2,7 +2,7 @@
 title: "Noções de Lógica"
 date: 2026-05-29T06:00:00-03:00
 draft: false
-description: ""
+description: "Introdução à lógica proposicional: proposições, tabelas verdade e os conectivos lógicos (negação, conjunção, disjunção, condicional e bicondicional) e sua aplicação na programação."
 tags: ["Matemática Elementar para Computação"]
 unlisted: true
 math: true

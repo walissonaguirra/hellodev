@@ -2,7 +2,7 @@
 title: "Operações Fundamentais"
 date: 2026-05-30T11:20:00-03:00
 draft: false
-description: ""
+description: "As quatro operações básicas dos números naturais — adição, subtração, multiplicação e divisão — e ideias derivadas como potenciação, múltiplos e divisores."
 tags: ["Matemática Elementar para Computação"]
 unlisted: true
 math: true
