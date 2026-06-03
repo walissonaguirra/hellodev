@@ -30,7 +30,7 @@ Abaixo, listo todo o conteúdo que será estudado. Conforme eu avançar, atualiz
 
 - [Operações Fundamentais]({{< ref "operacoes-fundamentais.md" >}})
 - [Bases Numéricas]({{< ref "bases-numericas.md" >}})
-- Números Primos
+- [Números Primos]({{< ref "numeros-primos.md" >}})
 - Números Inteiros, Frações e Números Racionais
 - Aritmética com Frações
 - Porcentagem
