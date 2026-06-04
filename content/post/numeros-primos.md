@@ -71,6 +71,12 @@ Esse é o caminho mais direto: testamos se algum número o divide além de \(1\)
 
 Para o \(97\), por exemplo, \(\sqrt{97} \approx 9{,}8\). Testamos só os primos \(2, 3, 5, 7\): nenhum divide o \(97\). Logo, \(97\) é primo, e nem precisamos chegar perto de \(97\) para ter certeza.
 
+Dá até para aplicar essa ideia sem calcular a raiz: basta ir dividindo pelos primos em ordem e olhar o quociente.
+
+> **O número é primo se as divisões sucessivas por números primos resultarem resto diferente de zero até o divisor ser maior ou igual ao quociente.**
+
+Voltando ao \(97\): dividimos por \(2\) (quociente \(48\), resto \(1\)), por \(3\) (quociente \(32\), resto \(1\)), por \(5\) (quociente \(19\), resto \(2\)) e por \(7\) (quociente \(13\), resto \(6\)). No \(11\), o quociente cai para \(8\) — o divisor passou o quociente, então paramos. Como nenhum resto deu zero, \(97\) é primo. E repare: o divisor alcançar o quociente é o mesmo que ultrapassar \(\sqrt{n}\), só que sem precisar tirar a raiz.
+
 ### Fatorar um número
 Aqui o objetivo é o inverso: dado um número, descobrir de quais primos ele é feito. A receita é sempre a mesma: **divida pelo menor primo que couber, repita com o resultado, e pare ao chegar a \(1\)**. Vamos fatorar o \(84\):
 
@@ -202,3 +208,4 @@ No fundo, é tudo a mesma ideia dos tijolos do começo. Montar um número multip
 ## Referências
 - [Brasil Escola - Números primos](https://brasilescola.uol.com.br/matematica/numeros-primos.htm)
 - [IME USP - Primos e Teorema Fundamental da Aritmética](https://www.ime.usp.br/~iusenko/ensino_2021_1/MAT0120/aulas/Aula9.pdf)
+- [Matemática Básica - Aula 7 - Números primos (YouTube)](https://youtu.be/qYww45PyTEs)
