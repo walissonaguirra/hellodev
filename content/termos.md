@@ -3,7 +3,7 @@ title: "Termos de Uso"
 description: "Condições para uso do conteúdo publicado em walissonaguirra.dev."
 ---
 
-Última atualização: 27 de maio de 2026.
+Última atualização: 4 de junho de 2026.
 
 Ao acessar este site, você concorda com os termos descritos abaixo. Se discordar de qualquer ponto, basta não utilizá-lo.
 
@@ -28,6 +28,16 @@ Para usos comerciais, entre em contato pelo e-mail `walissonaguirra@proton.me`.
 ## Trechos de código
 
 Os trechos de código apresentados nos posts seguem a mesma licença CC BY-NC 4.0 quando incorporados no fluxo do texto. Quando um repositório completo é referenciado, prevalece a licença declarada nesse repositório.
+
+## Comentários e conduta
+
+Os posts contam com uma seção de comentários fornecida pelo giscus, baseada no GitHub Discussions. Ao comentar, você é o único responsável pelo conteúdo que publica e concorda em:
+
+- não publicar conteúdo ilegal, ofensivo, difamatório, discriminatório ou que viole direitos de terceiros;
+- não enviar spam, propaganda não solicitada ou links maliciosos;
+- respeitar os demais participantes e os [Termos de Serviço do GitHub](https://docs.github.com/pt/site-policy/github-terms/github-terms-of-service).
+
+O autor pode, a seu critério e sem aviso prévio, moderar, ocultar ou remover comentários que violem estas regras, sem que isso gere qualquer obrigação ou responsabilidade.
 
 ## Marcas e conteúdo de terceiros
 
