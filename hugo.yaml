@@ -19,6 +19,18 @@ params:
   ogImage: https://cdn.walissonaguirra.dev/og-walissonaguirra-1.png
   ogImageWidth: 676
   ogImageHeight: 354
+  giscus:
+    repo: walissonaguirra/hellodev
+    repoId: R_kgDOSwHmjA
+    category: Announcements
+    categoryId: DIC_kwDOSwHmjM4C-hsD
+    mapping: pathname
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: top
+    theme: light
+    lang: pt
 
 menu:
   main:
