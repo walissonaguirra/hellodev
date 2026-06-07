@@ -134,15 +134,50 @@ Escrever parênteses em tudo cansa, então existe uma ordem de **precedência** 
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | Conectivo | \(\sim\) | \(\land\) | \(\lor\) | \(\rightarrow\) | \(\leftrightarrow\) |
 
-Na prática, é só agrupar primeiro o que liga mais forte:
+Na prática, é só agrupar primeiro o que liga mais forte (em azul):
 
-$$\sim P \lor Q \equiv (\sim P) \lor Q$$
-
-$$P \lor Q \land R \equiv P \lor (Q \land R)$$
-
-$$P \lor Q \rightarrow R \equiv (P \lor Q) \rightarrow R$$
-
-$$\sim P \land Q \leftrightarrow R \equiv ((\sim P) \land Q) \leftrightarrow R$$
+<div style="text-align:center; margin:1.5rem 0;">
+<svg viewBox="0 0 360 226" width="360" role="img" aria-label="Exemplos de precedência: a parte que liga mais forte recebe os parênteses primeiro" font-family="Georgia, 'Times New Roman', serif" font-size="17">
+  <g text-anchor="middle">
+    <text x="32" y="38" fill="#2b6cb0">∼P</text>
+    <text x="58" y="38" fill="#222">∨</text>
+    <text x="84" y="38" fill="#222">Q</text>
+    <text x="32" y="92" fill="#222">P</text>
+    <text x="58" y="92" fill="#222">∨</text>
+    <text x="84" y="92" fill="#2b6cb0">Q</text>
+    <text x="110" y="92" fill="#2b6cb0">∧</text>
+    <text x="136" y="92" fill="#2b6cb0">R</text>
+    <text x="32" y="146" fill="#2b6cb0">P</text>
+    <text x="58" y="146" fill="#2b6cb0">∨</text>
+    <text x="84" y="146" fill="#2b6cb0">Q</text>
+    <text x="110" y="146" fill="#222">→</text>
+    <text x="136" y="146" fill="#222">R</text>
+    <text x="32" y="200" fill="#2b6cb0">∼P</text>
+    <text x="58" y="200" fill="#222">∧</text>
+    <text x="84" y="200" fill="#222">Q</text>
+    <text x="110" y="200" fill="#222">↔</text>
+    <text x="136" y="200" fill="#222">R</text>
+  </g>
+  <g fill="none" stroke="#2b6cb0" stroke-width="1.3">
+    <path d="M20,46 v5 H44 V46 M32,51 v4"/>
+    <path d="M71,100 v5 H149 V100 M110,105 v4"/>
+    <path d="M20,154 v5 H96 V154 M58,159 v4"/>
+    <path d="M20,208 v5 H44 V208 M32,213 v4"/>
+  </g>
+  <g fill="#999" text-anchor="middle">
+    <text x="180" y="38">≡</text>
+    <text x="180" y="92">≡</text>
+    <text x="180" y="146">≡</text>
+    <text x="180" y="200">≡</text>
+  </g>
+  <g fill="#222" text-anchor="start">
+    <text x="205" y="38">(∼P) ∨ Q</text>
+    <text x="205" y="92">P ∨ (Q ∧ R)</text>
+    <text x="205" y="146">(P ∨ Q) → R</text>
+    <text x="205" y="200">((∼P) ∧ Q) ↔ R</text>
+  </g>
+</svg>
+</div>
 
 Quando o **mesmo** conectivo se repete, entra a **associatividade**, que diz por qual lado começar. A conjunção e a disjunção associam **à esquerda**; o condicional e o bicondicional, **à direita**:
 
