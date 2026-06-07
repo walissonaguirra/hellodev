@@ -45,7 +45,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 Bitter, "Bitter Fallback", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: calc(16px * var(--font-scale, 1));
+  font-size: calc(1.1rem * var(--font-scale, 1));
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -535,6 +535,9 @@ tr, td, th {
   padding: 6px 13px;
   border: 1px solid #ddd; }
 
+td .katex, th .katex {
+  font-size: 1em; }
+
 thead {
   background-color: #f8f8f8; }
 
@@ -571,13 +574,13 @@ header > .wrapper {
   border-top: 4px solid #9b59b6; }
 
 .post-title-custom {
-  font-size: 1.17em;
+  font-size: 1em;
   letter-spacing: -.5px;
   line-height: 1.1;
   font-weight: 300; }
 
 .year-heading {
-  font-size: 2em; }
+  font-size: calc(2rem * var(--font-scale, 1)); }
 
 .visually-hidden {
   position: absolute;
