@@ -16,6 +16,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {{/* Aplica o tamanho da fonte salvo antes da renderização para evitar flash */}}
+  <script>(function(){try{var v=parseFloat(localStorage.getItem("font-scale"));if(!isNaN(v)){document.documentElement.style.setProperty("--font-scale",Math.min(1.6,Math.max(0.85,v)));}}catch(e){}})();</script>
+
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}">
   <meta name="author" content="{{ site.Params.author }}">
