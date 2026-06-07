@@ -4,6 +4,12 @@
 <body hx-boost="true" hx-ext="head-support" hx-target="main" hx-select="main" hx-swap="outerHTML show:window:top">
   {{ partial "header.html" . }}
 
+  <aside class="font-size-controls" role="group" aria-label="Ajustar o tamanho da fonte">
+    <button type="button" class="font-size-btn font-size-btn--increase" data-font-size="increase" aria-label="Aumentar o tamanho da fonte">A</button>
+    <button type="button" class="font-size-btn font-size-btn--reset" data-font-size="reset" aria-label="Restaurar o tamanho padrão da fonte">A</button>
+    <button type="button" class="font-size-btn font-size-btn--decrease" data-font-size="decrease" aria-label="Diminuir o tamanho da fonte">A</button>
+  </aside>
+
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       {{ block "main" . }}{{ end }}
