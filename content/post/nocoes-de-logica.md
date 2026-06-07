@@ -2,36 +2,62 @@
 title: "Noções de Lógica"
 date: 2026-05-29T06:00:00-03:00
 draft: false
-description: "Introdução à lógica proposicional: proposições, tabelas verdade e os conectivos lógicos (negação, conjunção, disjunção, condicional e bicondicional) e sua aplicação na programação."
+description: "Entenda o que são proposições e como funcionam os conectivos lógicos (negação, conjunção, disjunção, condicional e bicondicional), com tabelas-verdade, precedência, montagem de fórmulas compostas e a avaliação de curto-circuito no código."
+images:
+  - https://cdn.walissonaguirra.dev/og-nocoes-de-logica.png
 tags: ["Matemática Elementar para Computação"]
 unlisted: true
 math: true
 ---
 
 ### Lógica Proposicional
+
 Esta é a forma mais simples de lógica. Nela os fatos do mundo real são apresentados como sentenças bivalentes, que também podem ser chamadas de Proposições.
 
 ### Proposição
-É uma sentença declarativa que só pode ser **verdadeira (V)** ou **falsa (F)**, mas nunca ambas ao mesmo tempo.
+
+Uma **proposição** é uma frase declarativa que pode ser classificada como **verdadeira (\(V\))** ou **falsa (\(F\))**, sem meio-termo e nunca as duas ao mesmo tempo.
 
 ### Proposição simples
+
 Não contém nenhum conectivo lógico e representa uma ideia única. (vamos falar mais sobre conectivos abaixo).
 
-Exemplos:
+São proposições:
 
-- **V** - "O número é par"
-- **V** - "Curitiba fica no Paraná"
-- **F** - "A terra é plana" - Será? 🤔
-- **F** - "5 é número par"
+- **V** — *"Curitiba fica no Paraná"*
+- **V** — *"2 é um número par"*
+- **F** — *"A Terra é plana"*
+- **F** — *"5 é par"*
 
 Não são proposições:
 
-- **?** - "Feche a porta" - Ordem
-- **?** - "Que horas são?" - Pergunta
-- **?** - "x + 1 = 5" - Sentença aberta (depende de x)
+- **?** — *"Feche a porta!"* (uma ordem)
+- **?** — *"Que horas são?"* (uma pergunta)
+- **?** — *"\(x + 1 = 5\)"* (uma sentença aberta: depende de quem é \(x\))
+
+### Símbolos proposicionais
+
+Para falar de qualquer proposição sem repetir a frase inteira, escrevemos cada uma como uma letra maiúscula: \(P\), \(Q\), \(R\), \(S\), \(P_1\), \(P_2\), \(P_3\)... São as **variáveis proposicionais**, cada uma um "lugar reservado" que pode receber qualquer proposição concreta. 
+
+A letra \(P\) vem de *proposição*; as outras só acompanham a ordem do alfabeto.
+
+- \(P\) — *"Está chovendo"* 
+- \(Q\) — *"Peguei o guarda-chuva"*
+
+### Conectivos lógicos
+
+São cinco conectivos no total, e é com eles que montamos qualquer proposição composta.
+
+| Símbolo | Conectivo | Lê-se |
+|:---:|:---:|:---|
+| \(\sim\) | negação | "não" |
+| \(\land\) | conjunção | "e" |
+| \(\lor\) | disjunção | "ou" |
+| \(\rightarrow\) | condicional | "se... então" |
+| \(\leftrightarrow\) | bicondicional | "se e somente se" |
 
 ### Proposição composta
-É formada pela combinação de duas ou mais proposições simples por meio de conectivos lógicos (\(\sim\), \(\land\), \(\lor\), \(\rightarrow\), \(\leftrightarrow\)). Seu valor lógico depende dos valores das proposições que a compõem e do conectivo usado.
+É formada pela combinação de duas ou mais proposições simples por meio de conectivos lógicos. Seu valor lógico depende dos valores das proposições que a compõem e do conectivo usado.
 
 Exemplos:
 
@@ -42,6 +68,89 @@ Exemplos:
 | **V** | "Terra é plana **ou** 2 é par." | \(p \lor q\) |
 | **V** | "**Se** chove, **então** o chão molha." | \(p \rightarrow q\) |
 | **F** | "**Não** é verdade que 2 é par." | \(\sim p\) |
+
+### Negação
+É o conectivo mais simples, escrito \(\sim\) (lê-se "não"). Ele age sobre uma única proposição e apenas **inverte** o seu valor: troca \(V\) por \(F\) e \(F\) por \(V\). Se \(P\) é *"Está chovendo"*, então \(\sim P\) é *"Não está chovendo"*.
+
+| \(P\) | \(\sim P\) |
+|:---:|:---:|
+| V | F |
+| F | V |
+
+Exemplo: _p_ = "2 é par" (**V**) — \(\sim p\) = "2 não é par" (**F**).
+
+### Conjunção
+É o "e", escrito \(\land\). \(P \land Q\) só é verdadeira quando \(P\) **e** \(Q\) são, ao mesmo tempo, verdadeiras. Basta uma das duas ser falsa para o resultado ser falso.
+
+| \(P\) | \(Q\) | \(P \land Q\) |
+|:---:|:---:|:---:|
+| V | V | V |
+| V | F | F |
+| F | V | F |
+| F | F | F |
+
+Exemplo: "2 é par **e** 3 é ímpar." — **V**
+
+### Disjunção
+É o "ou", escrito \(\lor\). \(P \lor Q\) é verdadeira quando **pelo menos uma** das proposições é verdadeira. Só dá falso quando as duas falham juntas.
+
+| \(P\) | \(Q\) | \(P \lor Q\) |
+|:---:|:---:|:---:|
+| V | V | V |
+| V | F | V |
+| F | V | V |
+| F | F | F |
+
+Exemplo: "Terra é plana **ou** 2 é par" — **V** (basta uma ser verdadeira).
+
+### Condicional
+É o "se... então", escrito \(P \rightarrow Q\). Só é **F** quando \(p\) é verdadeiro e \(q\) é falso. Lê-se como "se \(p\), então \(q\)".
+
+| \(P\) | \(Q\) | \(P \rightarrow Q\) |
+|:---:|:---:|:---:|
+| V | V | V |
+| V | F | F |
+| F | V | V |
+| F | F | V |
+
+Exemplo: "**Se** chove, **então** o chão molha." Se chover e o chão não molhar, a afirmação é falsa. Nos outros casos, é verdadeira.
+
+### Bicondicional
+É o "se e somente se", escrito \(P \leftrightarrow Q\). Ele é verdadeiro quando os dois lados têm o **mesmo** valor (ambos verdadeiros ou ambos falsos) e falso quando eles discordam.
+
+| \(P\) | \(Q\) | \(P \leftrightarrow Q\) |
+|:---:|:---:|:---:|
+| V | V | V |
+| V | F | F |
+| F | V | F |
+| F | F | V |
+
+Exemplo: "Um número é par **se e somente se** é divisível por 2."
+
+### Precedência dos conectivos
+Escrever parênteses em tudo cansa, então existe uma ordem de **precedência** que diz quem "amarra mais forte" quando eles faltam. É a mesma ideia de \(2 + 3 \times 4\) valer \(14\), porque o \(\times\) age antes do \(+\). Do mais forte (1º) para o mais fraco (5º):
+
+| Precedência | 1º | 2º | 3º | 4º | 5º |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Conectivo | \(\sim\) | \(\land\) | \(\lor\) | \(\rightarrow\) | \(\leftrightarrow\) |
+
+Na prática, é só agrupar primeiro o que liga mais forte:
+
+$$\sim P \lor Q \equiv (\sim P) \lor Q$$
+
+$$P \lor Q \land R \equiv P \lor (Q \land R)$$
+
+$$P \lor Q \rightarrow R \equiv (P \lor Q) \rightarrow R$$
+
+$$\sim P \land Q \leftrightarrow R \equiv ((\sim P) \land Q) \leftrightarrow R$$
+
+Quando o **mesmo** conectivo se repete, entra a **associatividade**, que diz por qual lado começar. A conjunção e a disjunção associam **à esquerda**; o condicional e o bicondicional, **à direita**:
+
+$$P \land Q \land R \equiv (P \land Q) \land R$$
+
+$$P \rightarrow Q \rightarrow R \equiv P \rightarrow (Q \rightarrow R)$$
+
+Na dúvida, ponha os parênteses: eles nunca mudam o sentido de uma fórmula já correta, só deixam a leitura explícita.
 
 ### Tabela verdade
 É uma forma de listar todas as combinações possíveis de valores lógicos (V ou F) de uma ou mais proposições e mostra o resultado para cada combinação.
@@ -59,110 +168,57 @@ Exemplo com duas proposições \(p\) e \(q\):
 
 A partir dessas combinações conseguimos avaliar qualquer proposição composta formada por \(p\) e \(q\).
 
-### Conectivos lógicos
-São os símbolos que ligam (ou modificam) proposições para formar proposições compostas. 
-
-#### Negação — \(\sim p\)
-Inverte o valor lógico da proposição. Se \(p\) tem o valor **V**, \(\sim p\) inverte o valor para **F**; e vice-versa.
-
-| \(p\) | \(\sim p\) |
-|:---:|:--------:|
-|  V  |    F     |
-|  F  |    V     |
-
-Exemplo: _p_ = "2 é par" (**V**) — \(\sim p\) = "2 não é par" (**F**).
-
-#### Conjunção — \(p \land q\) ("e")
-Só é **V** quando **as duas** proposições são verdadeiras.
-
-| \(p\) | \(q\) | \(p \land q\) |
-|:---:|:---:|:-----------:|
-|  V  |  V  |      V      |
-|  V  |  F  |      F      |
-|  F  |  V  |      F      |
-|  F  |  F  |      F      |
-
-Exemplo: "2 é par **e** 3 é ímpar." — **V**
-
-#### Disjunção — \(p \lor q\) ("ou")
-É **V** quando **pelo menos uma** proposição é verdadeira. Só é **F** quando as duas são falsas.
-
-| \(p\) | \(q\) | \(p \lor q\) |
-|:---:|:---:|:----------:|
-|  V  |  V  |     V      |
-|  V  |  F  |     V      |
-|  F  |  V  |     V      |
-|  F  |  F  |     F      |
-
-Exemplo: "Terra é plana **ou** 2 é par" — **V** (basta uma ser verdadeira).
-
-#### Condicional — \(p \rightarrow q\) ("se... então")
-Só é **F** quando \(p\) é verdadeiro e \(q\) é falso. Lê-se como "se \(p\), então \(q\)".
-
-| \(p\) | \(q\) | \(p \rightarrow q\) |
-|:---:|:---:|:-----------------:|
-|  V  |  V  |         V         |
-|  V  |  F  |         F         |
-|  F  |  V  |         V         |
-|  F  |  F  |         V         |
-
-Exemplo: "**Se** chove, **então** o chão molha." Se chover e o chão não molhar, a afirmação é falsa. Nos outros casos, é verdadeira.
-
-Acho este conectivo bastante confuso quando explicado na teoria. Talvez seja interessante ver exemplos práticos para entender melhor.
-
-Pense assim: se a hipótese nem aconteceu (\(p\)), a promessa (\(q\)) não foi quebrada, então o resultado é **V**.
-
-#### Bicondicional — \(p \leftrightarrow q\) ("se e somente se")
-É **V** quando as duas proposições têm o **mesmo** valor lógico.
-
-| \(p\) | \(q\) | \(p \leftrightarrow q\) |
-|:---:|:---:|:---------------------:|
-|  V  |  V  |           V           |
-|  V  |  F  |           F           |
-|  F  |  V  |           F           |
-|  F  |  F  |           V           |
-
-Exemplo: "Um número é par **se e somente se** é divisível por 2."
-
-#### Ordem de precedência
-Quando uma expressão combina vários conectivos, a ordem de avaliação (do mais forte para o mais fraco) é:
-
-| Precedência | 1º | 2º | 3º | 4º | 5º |
-|:-----------:|:-:|:-:|:-:|:-:|:-:|
-| Conectivo | \(\sim\) | \(\land\) | \(\lor\) | \(\rightarrow\) | \(\leftrightarrow\) |
-
-Na dúvida, use parênteses.
-
 ### Aplicações na programação
-A lógica proposicional é praticamente a base das estruturas de decisão. Todo `if`, `while` ou expressão booleana está avaliando uma proposição.
+A lógica proposicional é praticamente a base das estruturas de decisão: todo `if`, `while` ou expressão booleana está avaliando uma proposição. E os conectivos aparecem quase idênticos na maioria das linguagens:
 
-Os conectivos aparecem quase idênticos na maioria das linguagens:
+| Lógica | Operador (Go, C, JS...) |
+|:---:|:---:|
+| \(\sim p\) | `!p` |
+| \(p \land q\) | `p && q` |
+| \(p \lor q\) | `p \|\| q` |
+| \(p \rightarrow q\) | `!p \|\| q` *(equivalente)* |
+| \(p \leftrightarrow q\) | `p == q` |
 
-| Lógica          | Operador (Go, C, JS...) |
-|:---------------:|:-----------------------------:|
-| \(\sim p\)        | `!p`                          |
-| \(p \land q\)     | `p && q`                      |
-| \(p \lor q\)      | `p \|\| q`                    |
-| \(p \rightarrow q\) | `!p \|\| q` _(equivalente)_ |
-| \(p \leftrightarrow q\) | `p == q`                |
-
-Exemplo em Go:
+Há ainda um detalhe esperto. Olhe de novo as tabelas: na conjunção, **se o primeiro lado já é falso, o resultado é falso**, não importa o segundo; na disjunção, se o primeiro já é verdadeiro, o resultado é verdadeiro. As linguagens aproveitam isso e nem avaliam o segundo lado, é a [avaliação de curto-circuito]({{< ref "short-circuit-evaluation-golang.md" >}}):
 
 ```go
-idade := 20
-temCarteira := true
+package main
 
-if idade >= 18 && temCarteira {
-    fmt.Println("Pode dirigir")
+import "fmt"
+
+type Usuario struct {
+	Ativo bool
+}
+
+func main() {
+	var usuario *Usuario // nulo: nenhum usuário carregado
+
+	// Em p && q, como o primeiro lado é falso (usuario != nil é falso),
+	// o segundo nem é avaliado: NÃO estouramos ao ler usuario.Ativo.
+	if usuario != nil && usuario.Ativo {
+		fmt.Println("usuário ativo")
+	} else {
+		fmt.Println("sem usuário") // sem usuário
+	}
+
+	chovendo := true
+
+	// Em p || q, como o primeiro lado já é verdadeiro, o segundo é
+	// ignorado: precisaConsultarPrevisao() nunca chega a rodar.
+	if chovendo || precisaConsultarPrevisao() {
+		fmt.Println("vou levar o guarda-chuva") // vou levar o guarda-chuva
+	}
+}
+
+func precisaConsultarPrevisao() bool {
+	fmt.Println("consultando a previsão...") // nunca é impresso
+	return false
 }
 ```
 
-A condição do `if` é a proposição composta \(p \land q\), onde \(p\) = "idade maior ou igual a 18" e \(q\) = "tem carteira".
+Cada conectivo é uma regra sobre esses dois valores, a tabela-verdade é o mapa dessas regras, e o computador só consulta esse mapa por nós.
 
 ## Referências
 - [Programação Dinamica - Noções de Lógica](https://matematica.pgdinamica.com/logica.html)
-- [Apostila de Lógica Proposicional
-(Fundamentos Básicos)](https://www.facom.ufu.br/~gustavo/Logica/Apostila_LogicaProposicional.pdf)
-- [Avaliação de curto-circuito](https://pt.wikipedia.org/wiki/Avalia%C3%A7%C3%A3o_de_curto-circuito#:~:text=Avalia%C3%A7%C3%A3o%20de%20curto-circuito%2C%20avalia%C3%A7%C3%A3o,da%20express%C3%A3o:%20quando%20o%20primeiro)
-
-
+- [Apostila de Lógica Proposicional (Fundamentos Básicos)](https://www.facom.ufu.br/~gustavo/Logica/Apostila_LogicaProposicional.pdf)
+- [Wikipedia - Tabela verdade](https://en.wikipedia.org/wiki/Truth_table)
