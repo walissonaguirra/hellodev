@@ -10,9 +10,39 @@ unlisted: true
 math: true
 ---
 
-Um **número primo** é um número natural maior que \(1\) que só pode ser dividido, sem deixar resto, por \(1\) e por ele mesmo. O \(7\) é primo: ninguém além de \(1\) e \(7\) o divide certinho. Já o \(6\) não é, porque além de \(1\) e \(6\) ele também aceita \(2\) e \(3\).
+Um **número primo** é um número natural maior que \(1\) que só pode ser dividido, sem deixar resto, por \(1\) e por ele mesmo. O \(7\) é primo: ninguém além de \(1\) e \(7\) o divide sem deixa resto. Já o \(6\) não é, porque além de \(1\) e \(6\) ele também aceita \(2\) e \(3\).
 
-O segredo é que os primos são os **tijolos** com que todos os outros números são construídos. Pense neles como peças de montar que não dá para quebrar: qualquer número natural maior que \(1\) ou já é primo, ou pode ser escrito como uma multiplicação de primos. É só isso que precisamos guardar para entender o resto do post.
+- Com o \(6\) dá para montar um retângulo \(2 \times 3\)
+- Com \(7\), não há retângulo possível além da fila \(1 \times 7\).
+
+<div style="text-align:center; margin:1.5rem 0;">
+<svg viewBox="0 0 380 165" width="380" role="img" aria-label="Seis fichas formam um retângulo 2 por 3, composto; sete fichas só formam uma fila 1 por 7, primo" font-family="sans-serif">
+  <line x1="190" y1="20" x2="190" y2="150" stroke="#ddd" stroke-width="1"/>
+  <g fill="#333">
+    <circle cx="55" cy="50" r="9"/>
+    <circle cx="90" cy="50" r="9"/>
+    <circle cx="125" cy="50" r="9"/>
+    <circle cx="55" cy="85" r="9"/>
+    <circle cx="90" cy="85" r="9"/>
+    <circle cx="125" cy="85" r="9"/>
+  </g>
+  <text x="90" y="125" text-anchor="middle" font-size="15" fill="#111">6 = 2 × 3</text>
+  <text x="90" y="145" text-anchor="middle" font-size="13" fill="#666">composto</text>
+  <g fill="#2b6cb0">
+    <circle cx="215" cy="67" r="9"/>
+    <circle cx="239" cy="67" r="9"/>
+    <circle cx="263" cy="67" r="9"/>
+    <circle cx="287" cy="67" r="9"/>
+    <circle cx="311" cy="67" r="9"/>
+    <circle cx="335" cy="67" r="9"/>
+    <circle cx="359" cy="67" r="9"/>
+  </g>
+  <text x="287" y="125" text-anchor="middle" font-size="15" fill="#111">7 = 1 × 7</text>
+  <text x="287" y="145" text-anchor="middle" font-size="13" fill="#2b6cb0">primo</text>
+</svg>
+</div>
+
+Qualquer número natural maior que \(1\) ou já é primo, ou pode ser escrito como uma multiplicação de primos. 
 
 Veja o número \(12\). Podemos quebrá-lo em \(2 \times 6\); e o \(6\) ainda quebra em \(2 \times 3\). Aí paramos, porque \(2\) e \(3\) são primos e não dá para quebrar mais:
 
@@ -44,7 +74,7 @@ Ou seja:
 
 $$12 = 2 \times 2 \times 3 = 2^2 \times 3$$
 
-Essa mesma ideia vale para **qualquer** número. E não importa por onde você comece a quebrar: chega-se sempre no mesmo conjunto de primos no fim. Esse resultado tem nome — o **Teorema Fundamental da Aritmética** — e é ele que garante que todo número tem uma, e só uma, "fatoração" em primos. Outra surpresa: os primos nunca acabam. Existem infinitos deles, um fato que Euclides já provava há mais de dois mil anos.
+Não importa por onde você comece a quebrar: chega-se sempre no mesmo conjunto de primos no fim. Esse resultado tem nome — o **Teorema Fundamental da Aritmética** — e é ele que garante que todo número tem uma, e só uma, "fatoração" em primos. 
 
 ### Números primos
 São os números com exatamente **dois divisores**: o \(1\) e eles mesmos. Para saber se um número é primo, basta olhar a lista dos seus divisores. O \(17\), por exemplo:
@@ -64,21 +94,61 @@ Quatro divisores, então \(27\) não é primo: é **composto**. E todo composto 
 O \(1\) é um caso à parte: ele tem um **único** divisor, ele mesmo. Como primo exige exatamente dois divisores e composto exige mais de dois, o \(1\) não é nem primo nem composto. É justamente por isso que a definição começa em "maior que \(1\)".
 
 ### O número 2
-O \(2\) é o **único primo par**. A razão é simples: qualquer outro número par é divisível por \(2\), então ganha esse divisor a mais e vira composto na hora. Não há outro primo par, e nunca haverá.
+O \(2\) é o **único primo par**. A razão é simples: qualquer outro número par é divisível por \(2\), então ganha esse divisor a mais e vira composto. Não há outro primo par.
+
+Para fazer a classificação conte os divisores.
+
+| Número | Divisores | Quantos | É |
+|:---:|:---|:---:|:---|
+| \(1\) | \(\lbrace 1 \rbrace\) | 1 | nem primo nem composto |
+| \(2\) | \(\lbrace 1, 2 \rbrace\) | 2 | primo (o único par) |
+| \(17\) | \(\lbrace 1, 17 \rbrace\) | 2 | primo |
+| \(27\) | \(\lbrace 1, 3, 9, 27 \rbrace\) | 4 | composto |
 
 ### Como saber se um número é primo
-Esse é o caminho mais direto: testamos se algum número o divide além de \(1\) e dele mesmo. A "sacada" é que não precisamos testar todos os candidatos até \(n\) — basta ir até a **raiz quadrada** de \(n\). Se \(n = a \times b\), o menor dos dois fatores nunca passa de \(\sqrt{n}\); então, se nada até ali divide o número, ele é primo.
+Testamos se algum número o divide além de \(1\) e dele mesmo. Não é preciso testar todos os candidatos até \(n\) — basta ir até a **raiz quadrada** de \(n\). Se \(n = a \times b\), o menor dos dois fatores nunca passa de \(\sqrt{n}\); então, se nada até ali divide o número, ele é primo.
 
 Para o \(97\), por exemplo, \(\sqrt{97} \approx 9{,}8\). Testamos só os primos \(2, 3, 5, 7\): nenhum divide o \(97\). Logo, \(97\) é primo, e nem precisamos chegar perto de \(97\) para ter certeza.
 
-Dá até para aplicar essa ideia sem calcular a raiz: basta ir dividindo pelos primos em ordem e olhar o quociente.
+<div style="text-align:center; margin:1.5rem 0;">
+<svg viewBox="0 0 400 120" width="400" role="img" aria-label="Para testar se 97 é primo basta checar divisores até a raiz de 97, cerca de 9,8, uma fração pequena do intervalo" font-family="sans-serif">
+  <rect x="37" y="52" width="29" height="16" fill="#cfe3f5"/>
+  <line x1="30" y1="60" x2="385" y2="60" stroke="#333" stroke-width="1.5"/>
+  <line x1="66" y1="44" x2="66" y2="76" stroke="#2b6cb0" stroke-width="1.5"/>
+  <g font-size="12" fill="#444" text-anchor="middle" font-family="monospace">
+    <text x="37" y="90">2</text>
+    <text x="385" y="90">97</text>
+  </g>
+  <text x="66" y="36" text-anchor="middle" font-size="12" fill="#2b6cb0">√97 ≈ 9,8</text>
+  <text x="51" y="108" text-anchor="middle" font-size="12" fill="#2b6cb0">testar 2, 3, 5, 7</text>
+  <text x="235" y="108" text-anchor="middle" font-size="12" fill="#999">não precisa testar o resto</text>
+</svg>
+</div>
 
-> **O número é primo se as divisões sucessivas por números primos resultarem resto diferente de zero até o divisor ser maior ou igual ao quociente.**
+Dá para aplicar essa ideia sem calcular a raiz: basta ir dividindo pelos primos em ordem e olhar o quociente.
 
-Voltando ao \(97\): dividimos por \(2\) (quociente \(48\), resto \(1\)), por \(3\) (quociente \(32\), resto \(1\)), por \(5\) (quociente \(19\), resto \(2\)) e por \(7\) (quociente \(13\), resto \(6\)). No \(11\), o quociente cai para \(8\) — o divisor passou o quociente, então paramos. Como nenhum resto deu zero, \(97\) é primo. E repare: o divisor alcançar o quociente é o mesmo que ultrapassar \(\sqrt{n}\), só que sem precisar tirar a raiz.
+O número é primo se as divisões sucessivas por números primos resultarem resto diferente de zero até o divisor ser maior ou igual ao quociente.
+
+Voltando ao \(97\), dividimos pelos primos em ordem e olhamos o resto:
+
+| Divisor | Quociente | Resto | |
+|:---:|:---:|:---:|:---|
+| \(2\) | \(48\) | \(1\) | |
+| \(3\) | \(32\) | \(1\) | |
+| \(5\) | \(19\) | \(2\) | |
+| \(7\) | \(13\) | \(6\) | |
+| \(11\) | \(8\) | — | divisor \(>\) quociente: **paramos** |
+
+Como nenhum resto deu zero, \(97\) é primo. O divisor alcançar o quociente é o mesmo que ultrapassar \(\sqrt{n}\), só que sem precisar tirar a raiz.
 
 ### Fatorar um número
-Aqui o objetivo é o inverso: dado um número, descobrir de quais primos ele é feito. A receita é sempre a mesma: **divida pelo menor primo que couber, repita com o resultado, e pare ao chegar a \(1\)**. Vamos fatorar o \(84\):
+Aqui o objetivo é o inverso: dado um número, descobrir de quais primos ele é feito. São três passos:
+
+1. Divida pelo **menor primo que couber**.
+2. Repita com o resultado.
+3. Pare ao chegar a no \(1\).
+
+Vamos fatorar o \(84\):
 
 <div style="text-align:center; margin:1.5rem 0;">
 <svg viewBox="0 0 260 210" width="260" role="img" aria-label="Fatoração de 84 por divisões sucessivas: 84 por 2, 42 por 2, 21 por 3, 7 por 7" font-family="monospace">
@@ -104,9 +174,14 @@ Lendo a coluna da direita, os primos que apareceram foram \(2, 2, 3\) e \(7\). J
 $$84 = 2 \times 2 \times 3 \times 7 = 2^2 \times 3 \times 7$$
 
 ### O crivo de Eratóstenes
-Testar número por número funciona, mas é trabalhoso quando queremos **todos** os primos de um intervalo. O crivo de Eratóstenes é o atalho para isso. A ideia é eliminar quem sabidamente não é primo, em vez de testar um por um.
+Testar número por número funciona, mas é trabalhoso quando queremos **todos** os primos de um intervalo. O crivo de Eratóstenes é o atalho para isso: em vez de testar um por um, ele **elimina quem sabidamente não é primo**. O passo a passo:
 
-Listamos os números, guardamos o \(2\) e riscamos todos os seus múltiplos. O próximo número que sobrou é o \(3\), primo: riscamos os múltiplos dele. Depois o \(5\), depois o \(7\). Quando o próximo primo passa de \(\sqrt{50}\), podemos parar — o que sobrou já é tudo primo. Veja o resultado de \(1\) a \(50\), com os primos em destaque:
+1. Liste os números, guarde o \(2\) e risque todos os seus múltiplos.
+2. O próximo que sobrou é o \(3\): risque os múltiplos dele.
+3. Repita com o \(5\), depois o \(7\)...
+4. Pare quando o próximo primo passar da \(\sqrt{50}\) — o que sobrou já é tudo primo.
+
+Veja o resultado de \(1\) a \(50\), com os primos em destaque:
 
 <div style="text-align:center; margin:1.5rem 0;">
 <svg viewBox="0 0 380 200" width="380" role="img" aria-label="Crivo de Eratóstenes de 1 a 50, com os números primos destacados" font-family="monospace">
@@ -203,7 +278,7 @@ func main() {
 }
 ```
 
-No fundo, é tudo a mesma ideia dos tijolos do começo. Montar um número multiplicando primos é fácil; desmontá-lo de volta nos seus primos, quando ele é grande, é tão difícil que nem os computadores dão conta em tempo hábil. É exatamente nessa diferença que a criptografia que protege suas senhas e mensagens se apoia.
+Montar um número multiplicando primos é fácil; desmontá-lo de volta nos seus primos, quando ele é grande, é tão difícil que nem os computadores dão conta em tempo hábil. É exatamente nessa diferença que a criptografia que protege senhas e mensagens se apoia.
 
 ## Referências
 - [Brasil Escola - Números primos](https://brasilescola.uol.com.br/matematica/numeros-primos.htm)
