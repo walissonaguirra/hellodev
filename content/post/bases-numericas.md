@@ -12,7 +12,7 @@ math: true
 
 Uma **base numérica** é a quantidade de símbolos diferentes que usamos para escrever números. No dia a dia usamos dez símbolos (\(0\) a \(9\)), e por isso chamamos esse sistema de **base 10** ou **decimal**. Mas nada nos obriga a usar dez. Poderíamos usar dois, oito, dezesseis símbolos, e é exatamente isso que acontece dentro de um computador.
 
-O segredo é que todos esses sistemas compartilham a mesma ideia: a **notação posicional**. O valor de um algarismo não depende só dele, mas também da **posição** que ele ocupa. Cada casa vale uma potência da base.
+Todos esses sistemas compartilham a mesma ideia: a **notação posicional**. O valor de um algarismo não depende só dele, mas também da **posição** que ele ocupa. Cada casa vale uma potência da base.
 
 Veja o número \(253\) na base 10:
 
@@ -114,8 +114,21 @@ Cada casa vale uma potência de \(16\): \(1, 16, 256, 4096, \dots\). E, assim co
 
 É por isso que o hexadecimal aparece tanto em computação: cores em CSS (`#FF8800`), endereços de memória, códigos de bytes. Ele é uma forma compacta de escrever binário: dois algarismos hex representam um byte inteiro (\(8\) bits).
 
+### As quatro bases de relance
+Antes de converter entre elas, vale ter o panorama lado a lado:
+
+| Base | Nome | Algarismos | Cada casa vale | Onde aparece |
+|:---:|:---|:---|:---|:---|
+| \(2\) | Binário | \(0, 1\) | potência de \(2\) | bits, circuitos |
+| \(8\) | Octal | \(0\)–\(7\) | potência de \(8\) | grupos de 3 bits |
+| \(10\) | Decimal | \(0\)–\(9\) | potência de \(10\) | o dia a dia |
+| \(16\) | Hexadecimal | \(0\)–\(9\), \(A\)–\(F\) | potência de \(16\) | cores, memória, bytes |
+
 ### Conversão de outra base para decimal
-Esse é o caminho mais fácil, e a receita é sempre a mesma: **decompor pela notação posicional**. Multiplicamos cada algarismo pelo peso da sua casa (uma potência da base) e somamos tudo.
+Esse é o caminho mais fácil, e a receita é sempre a mesma: **decompor pela notação posicional**. São dois passos:
+
+1. Multiplique cada algarismo pelo peso da sua casa (uma potência da base).
+2. Some tudo.
 
 **Binário \(\to\) decimal.** Pesos são potências de \(2\):
 
@@ -130,7 +143,12 @@ $$137_8 = 1{\times}8^2 + 3{\times}8^1 + 7{\times}8^0 = 64 + 24 + 7 = 95_{10}$$
 $$1FA_{16} = 1{\times}16^2 + 15{\times}16^1 + 10{\times}16^0 = 256 + 240 + 10 = 506_{10}$$
 
 ### Conversão de decimal para outra base
-Aqui o caminho é o inverso: usamos **divisões sucessivas** pela base. Dividimos o número pela base, anotamos o resto, e repetimos com o quociente até chegar a zero. No fim, lemos os restos **de baixo para cima**.
+Aqui o caminho é o inverso: usamos **divisões sucessivas** pela base. A receita tem quatro passos:
+
+1. Divida o número pela base e **anote o resto**.
+2. Repita com o quociente.
+3. Pare quando o quociente chegar a zero.
+4. Leia os restos **de baixo para cima**.
 
 Vamos converter \(19_{10}\) para binário, dividindo sempre por \(2\):
 
