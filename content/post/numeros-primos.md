@@ -74,7 +74,7 @@ Ou seja:
 
 $$12 = 2 \times 2 \times 3 = 2^2 \times 3$$
 
-Não importa por onde você comece a quebrar: chega-se sempre no mesmo conjunto de primos no fim. Esse resultado tem nome — o **Teorema Fundamental da Aritmética** — e é ele que garante que todo número tem uma, e só uma, "fatoração" em primos. 
+Não importa por onde você comece a quebrar: chega-se sempre no mesmo conjunto de primos no fim. Esse resultado tem nome, o **Teorema Fundamental da Aritmética**, e é ele que garante que todo número tem uma, e só uma, "fatoração" em primos. 
 
 ### Números primos
 São os números com exatamente **dois divisores**: o \(1\) e eles mesmos. Para saber se um número é primo, basta olhar a lista dos seus divisores. O \(17\), por exemplo:
@@ -88,7 +88,7 @@ São os que têm **mais de dois divisores**. O \(27\) é um deles:
 
 $$D(27) = \lbrace 1, 3, 9, 27 \rbrace$$
 
-Quatro divisores, então \(27\) não é primo: é **composto**. E todo composto pode ser desmontado em primos — no caso, \(27 = 3 \times 3 \times 3\).
+Quatro divisores, então \(27\) não é primo: é **composto**. E todo composto pode ser desmontado em primos: no caso, \(27 = 3 \times 3 \times 3\).
 
 ### O número 1
 O \(1\) é um caso à parte: ele tem um **único** divisor, ele mesmo. Como primo exige exatamente dois divisores e composto exige mais de dois, o \(1\) não é nem primo nem composto. É justamente por isso que a definição começa em "maior que \(1\)".
@@ -106,7 +106,7 @@ Para fazer a classificação conte os divisores.
 | \(27\) | \(\lbrace 1, 3, 9, 27 \rbrace\) | 4 | composto |
 
 ### Como saber se um número é primo
-Testamos se algum número o divide além de \(1\) e dele mesmo. Não é preciso testar todos os candidatos até \(n\) — basta ir até a **raiz quadrada** de \(n\). Se \(n = a \times b\), o menor dos dois fatores nunca passa de \(\sqrt{n}\); então, se nada até ali divide o número, ele é primo.
+Testamos se algum número o divide além de \(1\) e dele mesmo. Não é preciso testar todos os candidatos até \(n\): basta ir até a **raiz quadrada** de \(n\). Se \(n = a \times b\), o menor dos dois fatores nunca passa de \(\sqrt{n}\); então, se nada até ali divide o número, ele é primo.
 
 Para o \(97\), por exemplo, \(\sqrt{97} \approx 9{,}8\). Testamos só os primos \(2, 3, 5, 7\): nenhum divide o \(97\). Logo, \(97\) é primo, e nem precisamos chegar perto de \(97\) para ter certeza.
 
@@ -137,7 +137,7 @@ Voltando ao \(97\), dividimos pelos primos em ordem e olhamos o resto:
 | \(3\) | \(32\) | \(1\) | |
 | \(5\) | \(19\) | \(2\) | |
 | \(7\) | \(13\) | \(6\) | |
-| \(11\) | \(8\) | — | divisor \(>\) quociente: **paramos** |
+| \(11\) | \(8\) | n/a | divisor \(>\) quociente: **paramos** |
 
 Como nenhum resto deu zero, \(97\) é primo. O divisor alcançar o quociente é o mesmo que ultrapassar \(\sqrt{n}\), só que sem precisar tirar a raiz.
 
@@ -179,7 +179,7 @@ Testar número por número funciona, mas é trabalhoso quando queremos **todos**
 1. Liste os números, guarde o \(2\) e risque todos os seus múltiplos.
 2. O próximo que sobrou é o \(3\): risque os múltiplos dele.
 3. Repita com o \(5\), depois o \(7\)...
-4. Pare quando o próximo primo passar da \(\sqrt{50}\) — o que sobrou já é tudo primo.
+4. Pare quando o próximo primo passar da \(\sqrt{50}\): o que sobrou já é tudo primo.
 
 Veja o resultado de \(1\) a \(50\), com os primos em destaque:
 
@@ -273,7 +273,7 @@ func main() {
 
 	// fácil de montar, difícil de desmontar:
 	p, q := 61, 67
-	fmt.Println(p * q) // 4087 — multiplicar é instantâneo
+	fmt.Println(p * q) // 4087, multiplicar é instantâneo
 	// mas, dado só o 4087, achar 61 e 67 de volta exige fatorar.
 }
 ```

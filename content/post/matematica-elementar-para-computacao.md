@@ -6,9 +6,9 @@ description: "Projeto pessoal de estudo de matemática elementar aplicada à com
 tags: ["Matemática"]
 ---
 
-Enquanto pesquisava sobre assuntos relacionados à matemática aplicada à computação, encontrei o projeto do Hallison — [Matemática Elementar para Computação](https://matematica.pgdinamica.com/).
+Enquanto pesquisava sobre assuntos relacionados à matemática aplicada à computação, encontrei o projeto do Hallison: [Matemática Elementar para Computação](https://matematica.pgdinamica.com/).
 
-> [Hallison Paz](https://hallpaz.github.io/) — PhD, Research Scientist, Computer Vision Researcher.
+> [Hallison Paz](https://hallpaz.github.io/): PhD, Research Scientist, Computer Vision Researcher.
 
 O projeto reúne uma sequência de conteúdos voltados aos fundamentos matemáticos utilizados em computação.
 

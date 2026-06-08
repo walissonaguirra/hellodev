@@ -2,7 +2,7 @@
 title: "Operações Fundamentais"
 date: 2026-05-30T11:20:00-03:00
 draft: false
-description: "As quatro operações básicas dos números naturais — adição, subtração, multiplicação e divisão — e ideias derivadas como potenciação, múltiplos e divisores."
+description: "As quatro operações básicas dos números naturais (adição, subtração, multiplicação e divisão) e ideias derivadas como potenciação, múltiplos e divisores."
 images:
   - https://cdn.walissonaguirra.dev/og-operacoes-fundamentais.png
 tags: ["Matemática Elementar para Computação"]
@@ -64,10 +64,10 @@ Somar é juntar quantidades. Na reta numérica, é avançar para a direita: \(3 
 
 A adição em \(\mathbb{N}\) tem quatro propriedades importantes:
 
-1. **Comutatividade** — A ordem não altera o resultado.
-2. **Associatividade** — O agrupamento não altera o resultado.
-3. **Fechamento** — somar dois naturais sempre resulta num natural.
-4. **Elemento neutro** — Na adição é \(0\) pois não altera o resultado.
+1. **Comutatividade**: a ordem não altera o resultado.
+2. **Associatividade**: o agrupamento não altera o resultado.
+3. **Fechamento**: somar dois naturais sempre resulta num natural.
+4. **Elemento neutro**: na adição é \(0\), pois não altera o resultado.
 
 ```go
 // comutatividade
@@ -135,7 +135,7 @@ Em código:
 7 - 3 // 4
 
 // não é comutativa
-3 - 7 // -4 — sai do conjunto dos naturais
+3 - 7 // -4, sai do conjunto dos naturais
 ```
 
 Ou seja, a subtração não tem fechamento em \(\mathbb{N}\).
@@ -186,10 +186,10 @@ A multiplicação tem ainda uma propriedade extra que liga ela à adição: a **
 ### Divisão
 A divisão envolve quatro elementos:
 
-- **dividendo** — O número que está sendo dividido
-- **divisor** — Por quem se divide
-- **quociente** — O resultado inteiro da divisão
-- **resto** — O que sobra
+- **dividendo**: o número que está sendo dividido
+- **divisor**: por quem se divide
+- **quociente**: o resultado inteiro da divisão
+- **resto**: o que sobra
 
 Em \(8 \div 2\), temos dividendo \(8\), divisor \(2\), quociente \(4\) e resto \(0\). Como o resto é zero, dizemos que \(2\) **divide** \(8\), ou que \(8\) **é divisível** por \(2\).
 
@@ -221,9 +221,9 @@ Já em \(9 \div 2\), o quociente é \(4\) e o resto é \(1\): formam-se \(4\) gr
 </div>
 
 ```go
-8 / 2 // 4 — quociente
-9 / 2 // 4 — quociente, resto 1
-9 % 2 // 1 — resto da divisão com o operador %
+8 / 2 // 4, quociente
+9 / 2 // 4, quociente e resto 1
+9 % 2 // 1, resto da divisão com o operador %
 ```
 
 ### Potenciação

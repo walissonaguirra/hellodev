@@ -24,16 +24,16 @@ Não contém nenhum conectivo lógico e representa uma ideia única. (vamos fala
 
 São proposições:
 
-- **V** — *"Curitiba fica no Paraná"*
-- **V** — *"2 é um número par"*
-- **F** — *"A Terra é plana"*
-- **F** — *"5 é par"*
+- **V**: *"Curitiba fica no Paraná"*
+- **V**: *"2 é um número par"*
+- **F**: *"A Terra é plana"*
+- **F**: *"5 é par"*
 
 Não são proposições:
 
-- **?** — *"Feche a porta!"* (uma ordem)
-- **?** — *"Que horas são?"* (uma pergunta)
-- **?** — *"\(x + 1 = 5\)"* (uma sentença aberta: depende de quem é \(x\))
+- **?**: *"Feche a porta!"* (uma ordem)
+- **?**: *"Que horas são?"* (uma pergunta)
+- **?**: *"\(x + 1 = 5\)"* (uma sentença aberta: depende de quem é \(x\))
 
 ### Símbolos proposicionais
 
@@ -41,8 +41,8 @@ Para falar de qualquer proposição sem repetir a frase inteira, escrevemos cada
 
 A letra \(P\) vem de *proposição*; as outras só acompanham a ordem do alfabeto.
 
-- \(P\) — *"Está chovendo"* 
-- \(Q\) — *"Peguei o guarda-chuva"*
+- \(P\): *"Está chovendo"* 
+- \(Q\): *"Peguei o guarda-chuva"*
 
 ### Conectivos lógicos
 
@@ -77,7 +77,7 @@ Exemplos:
 | V | F |
 | F | V |
 
-Exemplo: _p_ = "2 é par" (**V**) — \(\sim p\) = "2 não é par" (**F**).
+Exemplo: _p_ = "2 é par" (**V**); \(\sim p\) = "2 não é par" (**F**).
 
 ### Conjunção
 É o "e", escrito \(\land\). \(P \land Q\) só é verdadeira quando \(P\) **e** \(Q\) são, ao mesmo tempo, verdadeiras. Basta uma das duas ser falsa para o resultado ser falso.
@@ -89,7 +89,7 @@ Exemplo: _p_ = "2 é par" (**V**) — \(\sim p\) = "2 não é par" (**F**).
 | F | V | F |
 | F | F | F |
 
-Exemplo: "2 é par **e** 3 é ímpar." — **V**
+Exemplo: "2 é par **e** 3 é ímpar" é **V**.
 
 ### Disjunção
 É o "ou", escrito \(\lor\). \(P \lor Q\) é verdadeira quando **pelo menos uma** das proposições é verdadeira. Só dá falso quando as duas falham juntas.
@@ -101,7 +101,7 @@ Exemplo: "2 é par **e** 3 é ímpar." — **V**
 | F | V | V |
 | F | F | F |
 
-Exemplo: "Terra é plana **ou** 2 é par" — **V** (basta uma ser verdadeira).
+Exemplo: "Terra é plana **ou** 2 é par" é **V** (basta uma ser verdadeira).
 
 ### Condicional
 É o "se... então", escrito \(P \rightarrow Q\). Só é **F** quando \(p\) é verdadeiro e \(q\) é falso. Lê-se como "se \(p\), então \(q\)".
