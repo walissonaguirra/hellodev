@@ -3,6 +3,8 @@ title: "O HyperText Transfer Protocol (HTTP/1.1)"
 date: 2026-06-13T07:18:30-03:00
 draft: false
 description: "O funcionamento interno do HTTP/1.1: a anatomia da URL, requisições, respostas, métodos, cabeçalhos e status codes e exemplos práticos usando curl."
+images:
+  - https://cdn.walissonaguirra.dev/og-o-hypertext-transfer-protocol-http-1-1.png
 tags: ["http", "curl"]
 ---
 
