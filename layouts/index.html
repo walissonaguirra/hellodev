@@ -2,7 +2,7 @@
 <div class="home">
   <h1 class="visually-hidden">{{ site.Title }} — Blog</h1>
   <blockquote class="home-intro">
-    <p>Este é o meu blog pessoal. Não é uma obra-prima técnica; eu só gosto de escrever (às vezes não tão bem) sobre o que aprendo.</p>
+    <p>Esse é o meu espaço na internet: aqui falo sobre as coisas que estou estudando, projetos, códigos e o que mais eu quiser.</p>
   </blockquote>
   {{- $posts := where (where site.RegularPages "Section" "post") "Params.unlisted" "!=" true -}}
   {{- $byYear := $posts.GroupByDate "2006" -}}
