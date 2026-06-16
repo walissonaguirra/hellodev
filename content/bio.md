@@ -11,7 +11,7 @@ description: "Sobre Walisson Aguirra: engenheiro de software em Curitiba/PR, com
 
 Sou só mais um programador andando pelo mundo. Você pode me encontrar no [Codeberg](https://codeberg.org/walissonaguirra) e no [Mastodon](https://mastodon.social/@walissonaguirra), ou me enviar um email para `walissonaguirra@proton.me`. Se quiser me encontrar pessoalmente, estou em Curitiba/PR.
 
-Meu currículo está [aqui](https://drive.google.com/file/d/1TPqjsXoGeanvFVo19dpzVHqgjX3MSAYh/view?usp=drive_link), caso tenha interesse.
+Meu currículo está [aqui](https://drive.google.com/file/d/1uiy-boxsrzS-7OonlLT0msShDRvgRoDz/view?usp=drive_link), caso tenha interesse.
 
 > "I'm not running away from things. I'm running to them before they flare and fade forever."
 > — [The Doctor](https://www.doctorwho.tv/stories/the-power-of-three)
