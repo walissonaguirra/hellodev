@@ -1,9 +1,8 @@
 {{ define "main" }}
 <div class="home">
   <h1 class="visually-hidden">{{ site.Title }} — Blog</h1>
-  <blockquote class="home-intro">
-    <p>Esse é o meu espaço na internet: aqui falo sobre as coisas que estou estudando, projetos, códigos e o que mais eu quiser.</p>
-  </blockquote>
+  <!-- <blockquote class="home-intro"> -->
+  <!-- </blockquote> -->
   {{- $posts := where (where site.RegularPages "Section" "post") "Params.unlisted" "!=" true -}}
   {{- $byYear := $posts.GroupByDate "2006" -}}
   {{- range $byYear }}
