@@ -41,6 +41,26 @@ document.addEventListener('htmx:beforeRequest', function (evt) {
   }
 });
 
+// Compartilhar post (navigator.share ou fallback clipboard)
+document.addEventListener('click', function (evt) {
+  var btn = evt.target.closest && evt.target.closest('.sidebar-share');
+  if (!btn) return;
+  var url = btn.getAttribute('data-share');
+  var title = btn.getAttribute('data-title');
+  var shareData = { title: title, url: url };
+  if (navigator.share) {
+    navigator.share(shareData).catch(function () {});
+  } else {
+    navigator.clipboard.writeText(url).then(function () {
+      var orig = btn.textContent;
+      btn.textContent = 'Link copiado!';
+      setTimeout(function () {
+        btn.textContent = orig;
+      }, 2000);
+    }).catch(function () {});
+  }
+});
+
 // Atalhos no estilo Vim: "gg" vai para o início da página e "G" para o final.
 (function () {
   var lastG = 0;
