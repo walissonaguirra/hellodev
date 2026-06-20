@@ -63,6 +63,9 @@ markup:
             - ['$$', '$$']
           inline:
             - ['\(', '\)']
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
   highlight:
     style: github
     lineNos: false
