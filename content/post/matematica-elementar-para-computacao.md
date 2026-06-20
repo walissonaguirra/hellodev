@@ -2,6 +2,7 @@
 title: "Matemática Elementar para Computação"
 date: 2026-05-28T06:00:00-03:00
 draft: false
+unlisted: true
 description: "Projeto pessoal de estudo de matemática elementar aplicada à computação baseado no conteúdo do Hallison Paz."
 tags: ["Matemática"]
 ---
