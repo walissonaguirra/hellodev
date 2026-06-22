@@ -40,9 +40,6 @@ menu:
     - name: Bio
       pageRef: /bio
       weight: 2
-    - name: RSS
-      url: /index.xml
-      weight: 3
 
 permalinks:
   post: /blog/:slug/
@@ -71,7 +68,12 @@ markup:
 outputs:
   home:
     - HTML
-    - RSS
+  section:
+    - HTML
+  taxonomy:
+    - HTML
+  term:
+    - HTML
 
 security:
   http:
