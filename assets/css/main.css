@@ -107,18 +107,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: inherit; }
 
 /**
- * Links
- */
-a {
-  color: #2568ba;
-  text-decoration: none; }
-  a:visited {
-    color: #1d508f; }
-  a:hover {
-    color: #111;
-    text-decoration: underline; }
-
-/**
  * Blockquotes
  */
 blockquote {
@@ -130,15 +118,6 @@ blockquote {
   font-style: italic; }
   blockquote > :last-child {
     margin-bottom: 0; }
-
-/**
- * Rules
- */
-hr {
-  height: 4px;
-  margin: 15px 0;
-  border: 0;
-  background-color: #e8e8e8; }
 
 /**
  * Code formatting
@@ -182,7 +161,7 @@ pre {
 /**
  * Clearfix
  */
-.wrapper:after, .pagination:after {
+.wrapper:after {
   content: "";
   display: table;
   clear: both; }
@@ -283,17 +262,6 @@ pre {
 .page-heading {
   font-size: 20px; }
 
-.post-list {
-  margin-left: 0;
-  list-style: none; }
-  .post-list .post-link:hover {
-    text-decoration: none; }
-  .post-list > li {
-    margin-bottom: 60px; }
-    .post-list > li:not(:first-child) {
-      border-top: 4px solid #e8e8e8;
-      padding-top: 60px; }
-
 .post-archives {
   margin-left: 0;
   list-style: none; }
@@ -305,21 +273,6 @@ pre {
 .post-meta {
   font-size: 14px;
   color: #828282; }
-
-.post-link, .post-link:visited {
-  color: #111; }
-.post-link:hover {
-  color: #2568ba; }
-
-.post-continue a {
-  padding: 8px 15px;
-  text-decoration: none; }
-  .post-continue a, .post-continue a:visited {
-    color: #828282;
-    background-color: #e8e8e8; }
-  .post-continue a:hover {
-    color: white;
-    background-color: #2568ba; }
 
 /**
  * Posts
@@ -352,23 +305,6 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 1.125em; } }
-
-/**
- * Pagination
- */
-.pagination {
-  padding: 15px 0;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
-  text-align: center; }
-  .pagination a, .pagination a:visited {
-    color: #828282; }
-  .pagination a:hover {
-    color: #2568ba; }
-  .pagination .previous {
-    float: left; }
-  .pagination .next {
-    float: right; }
 
 /**
  * Syntax highlighting styles
