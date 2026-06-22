@@ -64,7 +64,6 @@ markup:
           inline:
             - ['\(', '\)']
   highlight:
-    style: github
     lineNos: false
     noClasses: false
     tabWidth: 2
