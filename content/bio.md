@@ -1,6 +1,7 @@
 ---
 title: "Bio"
 description: "Sobre Walisson Aguirra: engenheiro de software em Curitiba/PR, com foco em backend, Go Lang e PHP."
+hideTitle: true
 ---
 
 ### Hi!
