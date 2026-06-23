@@ -574,24 +574,6 @@ Footer layout
   margin: 0 6px;
   color: #c0c0c0; }
 
-.site-footer .social {
-  margin-top: 12px;
-  margin-bottom: 0; }
-
-.site-footer .social a {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 6px;
-  color: #828282; }
-
-.site-footer .social a:hover {
-  color: #3b97d3; }
-
-.site-footer .social svg {
-  width: 32px;
-  height: 32px;
-  display: block; }
-
 /*
 Error page (404)
  */
