@@ -46,6 +46,15 @@
   --font-scale: 1; }
 
 /**
+ * Cor de seleção de texto (acento do site)
+ */
+::-moz-selection {
+  background-color: rgba(217, 35, 15, 0.22); }
+
+::selection {
+  background-color: rgba(217, 35, 15, 0.22); }
+
+/**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
