@@ -55,8 +55,8 @@
 
   {{ partial "schema.html" . }}
 
-  <link rel="preload" href="/fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/bitter-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/charter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/charter-italic.woff2" as="font" type="font/woff2" crossorigin>
 
   {{- $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

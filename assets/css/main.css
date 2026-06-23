@@ -2,27 +2,41 @@
  * Fonts
  */
 @font-face {
-  font-family: "Bitter";
-  src: url("/fonts/bitter-latin.woff2") format("woff2");
-  font-weight: 400 700;
+  font-family: "Charter";
+  src: url("/fonts/charter-regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: "Bitter";
-  src: url("/fonts/bitter-latin-italic.woff2") format("woff2");
+  font-family: "Charter";
+  src: url("/fonts/charter-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap; }
 
-/* Metrics-adjusted fallback so the swap from Georgia → Bitter
-   doesn't shift layout (x-height, ascent/descent calibrated to Bitter v40). */
 @font-face {
-  font-family: "Bitter Fallback";
+  font-family: "Charter";
+  src: url("/fonts/charter-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Charter";
+  src: url("/fonts/charter-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap; }
+
+/* Metrics-adjusted fallback so the swap from Georgia → Charter
+   doesn't shift layout (x-height, ascent/descent calibrated to Charter). */
+@font-face {
+  font-family: "Charter Fallback";
   src: local("Georgia");
-  size-adjust: 104%;
-  ascent-override: 95%;
-  descent-override: 25%;
+  size-adjust: 99.9%;
+  ascent-override: 98.1%;
+  descent-override: 23.6%;
   line-gap-override: 0%; }
 
 /**
@@ -44,7 +58,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.6 Bitter, "Bitter Fallback", Georgia, Cambria, "Times New Roman", Times, serif;
+  font: 400 16px/1.6 Charter, "Charter Fallback", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: calc(1.1rem * var(--font-scale, 1));
   color: #111;
   background-color: #fdfdfd;
