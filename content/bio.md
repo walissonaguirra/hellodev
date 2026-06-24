@@ -7,7 +7,7 @@ hideTitle: true
 ### Hi!
 
 <div class="about-bio">
-<img class="about-ava" src="https://cdn.walissonaguirra.dev/walissonaguirra-2026-100x100.png" alt="Walisson Aguirra" width="100" height="100">
+<img class="about-ava" src="https://cdn.walissonaguirra.dev/avatar-100x100.jpg" alt="Walisson Aguirra" width="100" height="100">
 <div>
 
 Sou só mais um programador andando pelo mundo. Você pode falar comigo pelo [Mastodon](https://mastodon.social/@walissonaguirra) ou envia um email para `walissonaguirra@proton.me`. Se quiser me encontrar pessoalmente, estou em Curitiba/PR.
