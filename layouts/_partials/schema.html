@@ -1,4 +1,4 @@
-{{- $isPost := and (eq .Section "post") (not .IsHome) -}}
+{{- $isPost := and (eq .Section "blog") (not .IsHome) -}}
 {{- $description := or .Description site.Params.description -}}
 {{- $author := dict "@type" "Person" "name" site.Params.author "url" (absURL "/bio/") -}}
 {{- if $isPost -}}

@@ -5,7 +5,7 @@
   {{- $title = site.Title -}}
 {{- end -}}
 {{- $description := or .Description site.Params.description -}}
-{{- $isPost := and (eq .Section "post") (not .IsHome) -}}
+{{- $isPost := and (eq .Section "blog") (not .IsHome) -}}
 {{- $ogType := cond $isPost "article" "website" -}}
 {{- $ogImage := site.Params.ogImage -}}
 {{- $ogImageCustom := false -}}

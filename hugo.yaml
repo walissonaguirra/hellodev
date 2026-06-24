@@ -37,9 +37,6 @@ menu:
       pageRef: /bio
       weight: 2
 
-permalinks:
-  post: /blog/:slug/
-
 taxonomies:
   tag: tags
 

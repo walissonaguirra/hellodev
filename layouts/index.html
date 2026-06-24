@@ -3,7 +3,7 @@
   <h1 class="visually-hidden">{{ site.Title }} — Blog</h1>
   <!-- <blockquote class="home-intro"> -->
   <!-- </blockquote> -->
-  {{- $posts := where (where site.RegularPages "Section" "post") "Params.unlisted" "!=" true -}}
+  {{- $posts := where (where site.RegularPages "Section" "blog") "Params.unlisted" "!=" true -}}
   {{- $byYear := $posts.GroupByDate "2006" -}}
   {{- range $byYear }}
     <h2 class="year-heading" id="{{ .Key }}-ref">{{ .Key }}</h2>
