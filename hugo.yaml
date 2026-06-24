@@ -2,8 +2,6 @@ baseURL: https://walissonaguirra.dev/
 locale: pt-br
 defaultContentLanguage: pt-br
 title: Walisson Aguirra
-enableRobotsTXT: true
-enableEmoji: true
 removePathAccents: true
 
 frontmatter:
@@ -14,8 +12,6 @@ frontmatter:
 params:
   description: Engenheiro de software com foco em backend e arquitetura de aplicações, Go Lang e PHP
   author: Walisson Aguirra
-  email: walissonaguirra@proton.me
-  copyright: "Walisson Aguirra"
   ogImage: https://cdn.walissonaguirra.dev/og-walissonaguirra-1.png
   ogImageWidth: 676
   ogImageHeight: 354
