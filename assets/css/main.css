@@ -496,9 +496,6 @@ tr, td, th {
   padding: 6px 13px;
   border: 1px solid #ddd; }
 
-td .katex, th .katex {
-  font-size: 1em; }
-
 thead {
   background-color: #f8f8f8; }
 

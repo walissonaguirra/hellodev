@@ -51,15 +51,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-    extensions:
-      passthrough:
-        enable: true
-        delimiters:
-          block:
-            - ['\[', '\]']
-            - ['$$', '$$']
-          inline:
-            - ['\(', '\)']
   highlight:
     lineNos: false
     noClasses: false
@@ -78,5 +69,4 @@ outputs:
 security:
   http:
     urls:
-      - '^https://cdn\.jsdelivr\.net/'
       - '^https://cdn\.walissonaguirra\.dev/'

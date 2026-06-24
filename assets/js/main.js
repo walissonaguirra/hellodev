@@ -34,13 +34,6 @@
   });
 })();
 
-document.addEventListener('htmx:beforeRequest', function (evt) {
-  var elt = evt.detail && evt.detail.elt;
-  if (elt && elt.tagName === 'A' && elt.href === location.href) {
-    evt.preventDefault();
-  }
-});
-
 // Atalhos no estilo Vim: "gg" vai para o início da página e "G" para o final.
 (function () {
   var lastG = 0;

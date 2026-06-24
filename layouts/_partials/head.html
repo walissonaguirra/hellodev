@@ -61,21 +61,6 @@
   {{- $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
-  {{- if .Param "math" }}
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css"
-    integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi"
-    crossorigin="anonymous">
-  {{- end }}
-
-  {{- $htmx := resources.GetRemote "https://cdn.jsdelivr.net/npm/htmx.org@2.0.4/dist/htmx.min.js" | resources.Fingerprint -}}
-  <script defer src="{{ $htmx.RelPermalink }}" integrity="{{ $htmx.Data.Integrity }}" crossorigin="anonymous"></script>
-
-  {{/* head-support: mescla o <head> da resposta na navegação htmx, trazendo o CSS do KaTeX dos posts de matemática */}}
-  {{- $headSupport := resources.GetRemote "https://cdn.jsdelivr.net/npm/htmx-ext-head-support@2.0.5/head-support.min.js" | resources.Fingerprint -}}
-  <script defer src="{{ $headSupport.RelPermalink }}" integrity="{{ $headSupport.Data.Integrity }}" crossorigin="anonymous"></script>
-
   {{- $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
   <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </head>
