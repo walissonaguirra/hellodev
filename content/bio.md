@@ -14,7 +14,7 @@ Sou só mais um programador andando pelo mundo. Você pode falar comigo pelo [Ma
 
 Meu currículo está [aqui](https://drive.google.com/file/d/1uiy-boxsrzS-7OonlLT0msShDRvgRoDz/view?usp=drive_link), caso tenha interesse.
 
-[Codeberg](https://codeberg.org/walissonaguirra) · [GitHub](https://github.com/walissonaguirra) · [Medium](https://medium.com/@walissonaguirra) · [dev.to](https://dev.to/walissonaguirra)
+[Codeberg](https://codeberg.org/walissonaguirra) · [Medium](https://medium.com/@walissonaguirra) · [dev.to](https://dev.to/walissonaguirra)
 
 > "I'm not running away from things. I'm running to them before they flare and fade forever."
 > — [The Doctor](https://www.doctorwho.tv/stories/the-power-of-three)
