@@ -15,18 +15,6 @@ params:
   ogImage: https://cdn.walissonaguirra.dev/avatar-100x100.jpg
   ogImageWidth: 100
   ogImageHeight: 100
-  giscus:
-    repo: walissonaguirra/hellodev
-    repoId: R_kgDOSwHmjA
-    category: Announcements
-    categoryId: DIC_kwDOSwHmjM4C-hsD
-    mapping: pathname
-    strict: 0
-    reactionsEnabled: 1
-    emitMetadata: 0
-    inputPosition: top
-    theme: light
-    lang: pt
 
 menu:
   main:
