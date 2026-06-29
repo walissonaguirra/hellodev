@@ -43,7 +43,8 @@
  * Acessibilidade: fator de escala da fonte controlado pelo usuário.
  */
 :root {
-  --font-scale: 1; }
+  --font-scale: 1;
+  color-scheme: light dark; }
 
 /**
  * Cor de seleção de texto (acento do site)
@@ -618,3 +619,105 @@ About / bio
 @media screen and (max-width: 600px) {
   .about-bio {
     flex-direction: column; } }
+
+/**
+ * Modo escuro — sincronizado com a preferência do sistema (sem toggle).
+ */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #dcdcdc;
+    background-color: #1b1b1b; }
+
+  ::-moz-selection {
+    background-color: rgba(241, 90, 71, 0.3); }
+  ::selection {
+    background-color: rgba(241, 90, 71, 0.3); }
+
+  a:link, a:visited {
+    color: #f15a47; }
+  a:hover, a:active {
+    color: #5aa9e6; }
+
+  .post-link, .post-link:visited {
+    color: #f15a47; }
+  .post-link, .post-link:hover, .post-link:active {
+    color: #5aa9e6; }
+
+  .site-title, .site-title:visited {
+    color: #cfcfcf; }
+  .site-nav .page-link {
+    color: #dcdcdc; }
+
+  .post-meta,
+  .site-footer,
+  .error-page .error-message {
+    color: #9a9a9a; }
+  .site-footer .footer-meta .sep {
+    color: #555; }
+
+  blockquote {
+    color: #9a9a9a;
+    border-left-color: #333; }
+
+  hr {
+    background-color: #333; }
+
+  pre, code {
+    border-color: #333;
+    background-color: #242424; }
+  .highlight,
+  .highlighter-rouge .highlight {
+    background-color: #242424; }
+
+  tr, td, th {
+    border-color: #333; }
+  thead {
+    background-color: #242424; }
+
+  .font-size-controls {
+    background-color: #1b1b1b;
+    border-color: #333; }
+  .font-size-controls .font-size-btn {
+    color: #dcdcdc; }
+
+  .error-page .error-code {
+    color: #333; }
+
+  /* Realce de sintaxe ajustado para o fundo escuro */
+  .highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp {
+    color: #8b949e; }
+  .highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .o, .highlight .ow {
+    color: #ff7b72; }
+  .highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx {
+    color: #a5d6ff; }
+  .highlight .sr {
+    color: #7ee787; }
+  .highlight .ss {
+    color: #d2a8ff; }
+  .highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo, .highlight .il {
+    color: #79c0ff; }
+  .highlight .nf, .highlight .ne {
+    color: #d2a8ff; }
+  .highlight .nc, .highlight .nn {
+    color: #ffa657; }
+  .highlight .nt {
+    color: #7ee787; }
+  .highlight .na, .highlight .nb, .highlight .bp, .highlight .no, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi {
+    color: #79c0ff; }
+  .highlight .err {
+    color: #ffa198;
+    background-color: transparent; }
+  .highlight .gd {
+    color: #ffdcd7;
+    background-color: #67060c; }
+  .highlight .gd .x {
+    color: #ffdcd7;
+    background-color: #8d1117; }
+  .highlight .gi {
+    color: #aff5b4;
+    background-color: #033a16; }
+  .highlight .gi .x {
+    color: #aff5b4;
+    background-color: #044f1f; }
+  .highlight .gh, .highlight .gu, .highlight .gp {
+    color: #8b949e; } }
