@@ -621,6 +621,108 @@ About / bio
     flex-direction: column; } }
 
 /**
+ * Terminal interativo da homepage.
+ * Escondido por padrão; revelado pelo JS (.is-ready) — progressive enhancement.
+ */
+.terminal {
+  display: none;
+  margin: 0 0 40px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  overflow: hidden;
+  font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace;
+  font-size: 13px;
+  line-height: 1.6; }
+  .terminal.is-ready {
+    display: block; }
+
+.terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #f1f1f1; }
+
+.terminal__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #cfcfcf; }
+  .terminal__dot:nth-child(1) {
+    background-color: #ec6a5e; }
+  .terminal__dot:nth-child(2) {
+    background-color: #f4be4f; }
+  .terminal__dot:nth-child(3) {
+    background-color: #61c554; }
+
+.terminal__title {
+  margin-left: 6px;
+  color: #828282;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.terminal__screen {
+  padding: 12px 14px; }
+
+.terminal__output {
+  max-height: 240px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word; }
+  .terminal__output:not(:empty) {
+    margin-bottom: 8px; }
+
+.terminal__row {
+  min-height: 1.6em; }
+
+.terminal__row--echo {
+  color: #555; }
+
+.terminal__line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  cursor: text; }
+
+.terminal__prompt {
+  color: #d9230f;
+  font-weight: bold;
+  flex-shrink: 0; }
+
+.terminal__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  caret-color: #d9230f;
+  animation: terminal-caret 1s step-end infinite; }
+  .terminal__input:focus {
+    animation: none; }
+
+@keyframes terminal-caret {
+  0%, 100% { caret-color: #d9230f; }
+  50% { caret-color: transparent; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal__input {
+    animation: none; } }
+
+@media screen and (max-width: 600px) {
+  .terminal__output {
+    max-height: 200px; }
+  .terminal__title {
+    font-size: 11px; } }
+
+/**
  * Modo escuro — sincronizado com a preferência do sistema (sem toggle).
  */
 @media (prefers-color-scheme: dark) {
@@ -721,3 +823,31 @@ About / bio
     background-color: #044f1f; }
   .highlight .gh, .highlight .gu, .highlight .gp {
     color: #8b949e; } }
+
+/**
+ * Terminal — contraparte para o modo escuro.
+ */
+@media (prefers-color-scheme: dark) {
+  .terminal {
+    border-color: #333;
+    background-color: #242424; }
+
+  .terminal__bar {
+    border-bottom-color: #333;
+    background-color: #2b2b2b; }
+
+  .terminal__title {
+    color: #9a9a9a; }
+
+  .terminal__row--echo {
+    color: #9a9a9a; }
+
+  .terminal__prompt {
+    color: #f15a47; }
+
+  .terminal__input {
+    caret-color: #f15a47; }
+
+  @keyframes terminal-caret {
+    0%, 100% { caret-color: #f15a47; }
+    50% { caret-color: transparent; } } }

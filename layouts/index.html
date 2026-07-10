@@ -1,9 +1,37 @@
 {{ define "main" }}
 <div class="home">
   <h1 class="visually-hidden">{{ site.Title }} — Blog</h1>
-  <!-- <blockquote class="home-intro"> -->
-  <!-- </blockquote> -->
+
   {{- $posts := where (where site.RegularPages "Section" "blog") "Params.unlisted" "!=" true -}}
+
+  <section class="terminal" data-terminal aria-label="Terminal interativo para navegar o blog">
+    <div class="terminal__bar" aria-hidden="true">
+      <span class="terminal__dot"></span>
+      <span class="terminal__dot"></span>
+      <span class="terminal__dot"></span>
+      <span class="terminal__title">{{ with site.BaseURL }}{{ (urls.Parse .).Host }}{{ else }}{{ site.Title }}{{ end }} — /bin/sh</span>
+    </div>
+    <div class="terminal__screen">
+      <div class="terminal__output" role="log" aria-live="polite"></div>
+      <label class="terminal__line">
+        <span class="terminal__prompt" aria-hidden="true">$</span>
+        <input class="terminal__input" type="text" aria-label="Digite um comando (ex.: help)"
+               autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+      </label>
+    </div>
+  </section>
+
+  <script type="application/json" id="terminal-data">
+  {
+    "bioUrl": {{ "/bio" | relLangURL }},
+    "posts": [
+      {{- range $i, $p := $posts }}{{ if $i }},{{ end }}
+      {"title": {{ $p.Title }}, "url": {{ $p.RelPermalink }}, "year": {{ $p.Date.Year }}, "tags": {{ or $p.Params.tags slice }}}
+      {{- end }}
+    ]
+  }
+  </script>
+
   {{- $byYear := $posts.GroupByDate "2006" -}}
   {{- range $byYear }}
     <h2 class="year-heading" id="{{ .Key }}-ref">{{ .Key }}</h2>
