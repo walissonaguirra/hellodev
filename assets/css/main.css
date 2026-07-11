@@ -307,7 +307,7 @@ pre {
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
-  line-height: 1; }
+  line-height: 1.2; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }
@@ -535,11 +535,11 @@ header > .wrapper {
 .post-title-custom {
   font-size: 1em;
   letter-spacing: -.5px;
-  line-height: 1.1;
-  font-weight: 300; }
+  line-height: 1.25;
+  font-weight: 400; }
 
 .year-heading {
-  font-size: calc(2rem * var(--font-scale, 1)); }
+  font-size: calc(1.7rem * var(--font-scale, 1)); }
 
 .visually-hidden {
   position: absolute;
