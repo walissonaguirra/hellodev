@@ -3,7 +3,7 @@ title: "Política de Privacidade"
 description: "Como este site lida com dados pessoais e cookies."
 ---
 
-Última atualização: 30 de junho de 2026.
+Última atualização: 12 de julho de 2026.
 
 ## Quem somos
 
@@ -21,7 +21,11 @@ Quando você acessa o site, o provedor de hospedagem pode registrar automaticame
 
 ## Cookies e armazenamento local
 
-Não utilizamos cookies de rastreamento próprios. O site pode guardar no seu navegador, via `localStorage`, apenas preferências de leitura definidas por você (como o ajuste do tamanho da fonte). Essa informação fica armazenada localmente no seu dispositivo, não é enviada a nenhum servidor e pode ser apagada a qualquer momento limpando os dados do navegador. O tema claro ou escuro acompanha automaticamente a preferência do seu sistema operacional e não requer qualquer armazenamento.
+Não utilizamos cookies de rastreamento, publicidade ou análise de comportamento.
+
+O único cookie definido por este site é um identificador funcional chamado `vid`, criado apenas quando você aplaude uma publicação. Ele guarda um valor aleatório (um UUID, sem qualquer relação com a sua identidade) e serve unicamente para registrar que aquele navegador já aplaudiu determinado post, evitando contagens duplicadas. Não acompanha você por outros sites, expira em um ano e pode ser apagado a qualquer momento limpando os dados do navegador. A contagem de aplausos é armazenada no servidor associada a esse identificador aleatório — nunca a você.
+
+O site também pode guardar no seu navegador, via `localStorage`, apenas preferências definidas por você (como o ajuste do tamanho da fonte e o histórico do terminal interativo da página inicial). Essas informações ficam armazenadas localmente no seu dispositivo, não são enviadas a nenhum servidor e podem ser apagadas a qualquer momento limpando os dados do navegador. O tema claro ou escuro acompanha automaticamente a preferência do seu sistema operacional e não requer qualquer armazenamento.
 
 Caso alguma página embuta conteúdos de terceiros (como vídeos ou repositórios), o navegador pode receber cookies definidos por esses serviços, sujeitos às políticas de privacidade deles.
 
