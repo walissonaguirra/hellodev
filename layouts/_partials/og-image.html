@@ -1,0 +1,29 @@
+{{- /* Gera a imagem OG do post (1200x630) no estilo do blog. Retorna o recurso. */ -}}
+{{- $base := resources.Get "images/og-base.png" -}}
+{{- $fontReg := resources.Get "fonts/charter-regular.ttf" -}}
+{{- $fontBold := resources.Get "fonts/charter-bold.ttf" -}}
+
+{{- /* Quebra o título em linhas de ~24 caracteres. */ -}}
+{{- $lines := slice -}}
+{{- $cur := "" -}}
+{{- range (split .Title " ") -}}
+  {{- $try := cond (eq $cur "") . (printf "%s %s" $cur .) -}}
+  {{- if and (gt (len $try) 24) (ne $cur "") -}}
+    {{- $lines = $lines | append $cur -}}
+    {{- $cur = . -}}
+  {{- else -}}
+    {{- $cur = $try -}}
+  {{- end -}}
+{{- end -}}
+{{- if ne $cur "" -}}{{- $lines = $lines | append $cur -}}{{- end -}}
+{{- $titleText := delimit $lines "\n" -}}
+
+{{- $meta := printf "Publicado em %s" (.Date | time.Format "2 de January, 2006") -}}
+{{- with .Params.tags -}}{{- $meta = printf "%s  •  %s" $meta (index . 0) -}}{{- end -}}
+
+{{- $img := $base.Filter (slice
+  (images.Text "Walisson Aguirra" (dict "color" "#424242" "size" 34 "x" 80 "y" 60 "font" $fontReg))
+  (images.Text $titleText (dict "color" "#111111" "size" 66 "x" 80 "y" 190 "linespacing" 18 "font" $fontBold))
+  (images.Text $meta (dict "color" "#828282" "size" 28 "x" 80 "y" 520 "font" $fontReg))
+) -}}
+{{- return $img -}}
