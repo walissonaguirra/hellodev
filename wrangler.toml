@@ -1,0 +1,11 @@
+# Configuração do Cloudflare Pages usada apenas pelas Functions em ./functions.
+# O Hugo continua gerando o site em ./public; o wrangler publica esse diretório
+# e compila as Functions, injetando o binding do D1 abaixo.
+name = "walissonaguirra-dev"
+pages_build_output_dir = "public"
+compatibility_date = "2025-07-01"
+
+[[d1_databases]]
+binding = "DB"                       # disponível como env.DB nas Functions
+database_name = "walissonaguirra-claps"
+database_id = "COLE_AQUI_O_ID_DO_D1" # saída de `wrangler d1 create`

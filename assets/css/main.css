@@ -851,3 +851,104 @@ About / bio
   @keyframes terminal-caret {
     0%, 100% { caret-color: #f15a47; }
     50% { caret-color: transparent; } } }
+
+/**
+ * Aplausos (estilo Medium) — ícone outline, vira fill ao aplaudir.
+ * Revelado pelo JS (.is-ready); inline no mobile, margem esquerda em telas largas.
+ */
+.claps {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 40px 0 10px; }
+  .claps.is-ready {
+    display: flex; }
+
+@media screen and (min-width: 1024px) {
+  .post-content {
+    position: relative; }
+  .claps {
+    position: absolute;
+    top: 0;
+    left: -72px;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0; } }
+
+.claps__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: #9a9a9a;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.1s; }
+  .claps__btn:hover {
+    color: #555; }
+  .claps__btn:focus-visible {
+    outline: 2px solid #3b97d3;
+    outline-offset: 2px; }
+  .claps__btn:active {
+    transform: scale(0.88); }
+  .claps__btn--flash {
+    color: #d9230f; }
+  .claps__btn.is-clapped {
+    color: #828282; }
+
+.claps__icon--fill {
+  display: none; }
+.claps__btn.is-clapped .claps__icon--outline,
+.claps__btn--flash .claps__icon--outline {
+  display: none; }
+.claps__btn.is-clapped .claps__icon--fill,
+.claps__btn--flash .claps__icon--fill {
+  display: block; }
+
+.claps__plus {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d9230f;
+  pointer-events: none;
+  animation: claps-plus 0.7s ease-out forwards; }
+  .claps__plus--remove {
+    color: #9a9a9a; }
+
+@keyframes claps-plus {
+  0% { opacity: 0; transform: translate(-50%, 4px) scale(0.6); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -22px) scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .claps__plus {
+    display: none; } }
+
+.claps__count {
+  font-size: calc(0.95rem * var(--font-scale, 1));
+  color: #9a9a9a;
+  font-variant-numeric: tabular-nums;
+  min-width: 1.5em;
+  text-align: center; }
+
+@media (prefers-color-scheme: dark) {
+  .claps__btn {
+    color: #7f7f7f; }
+    .claps__btn:hover {
+      color: #bbb; }
+    .claps__btn--flash {
+      color: #f15a47; }
+    .claps__btn.is-clapped {
+      color: #9a9a9a; }
+  .claps__plus {
+    color: #f15a47; }
+    .claps__plus--remove {
+      color: #7f7f7f; }
+  .claps__count {
+    color: #7f7f7f; } }

@@ -306,3 +306,62 @@
     "digite 'help' e Enter para começar. 'ls' lista os posts."
   ]);
 })();
+
+// Aplausos (estilo Medium): clicar aplaude, clicar de novo remove; total no D1.
+(function () {
+  var root = document.querySelector('[data-claps]');
+  if (!root) return;
+
+  var btn = root.querySelector('[data-claps-btn]');
+  var countEl = root.querySelector('[data-claps-count]');
+  var slug = root.getAttribute('data-claps-slug');
+  if (!btn || !countEl || !slug) return;
+
+  var API = '/api/claps/' + encodeURIComponent(slug);
+  var total = 0, clapped = false;
+
+  function render() {
+    countEl.textContent = total;
+    btn.classList.toggle('is-clapped', clapped);
+  }
+
+  function floatDelta(text, remove) {
+    var el = document.createElement('span');
+    el.className = 'claps__plus' + (remove ? ' claps__plus--remove' : '');
+    el.textContent = text;
+    btn.appendChild(el);
+    setTimeout(function () { el.remove(); }, 700);
+  }
+
+  function sync(method, prevTotal, prevClapped) {
+    fetch(API, { method: method, credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { total = d.total; clapped = d.mine > 0; render(); })
+      .catch(function () { total = prevTotal; clapped = prevClapped; render(); });
+  }
+
+  btn.addEventListener('click', function () {
+    var prevTotal = total, prevClapped = clapped;
+    if (!clapped) {
+      clapped = true; total++; render();
+      floatDelta('+1', false);
+      btn.classList.add('claps__btn--flash');
+      setTimeout(function () { btn.classList.remove('claps__btn--flash'); }, 700);
+      sync('POST', prevTotal, prevClapped);
+    } else {
+      clapped = false; total = Math.max(0, total - 1); render();
+      floatDelta('−1', true);
+      sync('DELETE', prevTotal, prevClapped);
+    }
+  });
+
+  fetch(API, { credentials: 'same-origin' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      total = d.total || 0;
+      clapped = d.mine > 0;
+      render();
+      root.classList.add('is-ready');
+    })
+    .catch(function () {});
+})();
