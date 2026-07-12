@@ -25,6 +25,9 @@
 
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="icon" type="image/jpeg" href="https://cdn.walissonaguirra.dev/avatar-100x100.jpg">
+  {{- with site.Home.OutputFormats.Get "rss" }}
+  <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+  {{- end }}
 
   {{/* Open Graph */}}
   <meta property="og:title" content="{{ $title }}">
