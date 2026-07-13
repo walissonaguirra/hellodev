@@ -8,4 +8,4 @@ compatibility_date = "2025-07-01"
 [[d1_databases]]
 binding = "DB"                       # disponível como env.DB nas Functions
 database_name = "walissonaguirra-claps"
-database_id = "COLE_AQUI_O_ID_DO_D1" # saída de `wrangler d1 create`
+database_id = "b678548b-9ea2-40c6-b7bc-83f211d8a4e0"
