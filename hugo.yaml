@@ -37,10 +37,18 @@ markup:
     noClasses: false
     tabWidth: 2
 
+outputFormats:
+  clapsslugs:
+    mediaType: application/json
+    baseName: claps-slugs
+    isPlainText: true
+    notAlternative: true
+
 outputs:
   home:
     - HTML
     - RSS
+    - clapsslugs
   section:
     - HTML
   taxonomy:

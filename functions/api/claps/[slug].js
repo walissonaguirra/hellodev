@@ -6,6 +6,19 @@
 
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,127}$/;
 
+// Lista de slugs válidos (gerada pelo Hugo em /claps-slugs.json), em cache por
+// isolate — cada deploy recria os isolates, então não fica desatualizada.
+let allowedSlugs;
+
+async function loadAllowedSlugs(env, request) {
+  if (allowedSlugs) return allowedSlugs;
+  try {
+    const res = await env.ASSETS.fetch(new URL('/claps-slugs.json', request.url));
+    if (res.ok) allowedSlugs = new Set(await res.json());
+  } catch (_) { /* fail-open: se não carregar, não bloqueia */ }
+  return allowedSlugs;
+}
+
 function getVisitorId(request) {
   const cookie = request.headers.get('Cookie') || '';
   const m = cookie.match(/(?:^|;\s*)vid=([0-9a-f-]{36})/);
@@ -50,6 +63,11 @@ export async function onRequestGet({ params, env, request }) {
 export async function onRequestPost({ params, env, request }) {
   const slug = params.slug;
   if (!SLUG_RE.test(slug)) return json({ error: 'invalid slug' }, { status: 400 });
+
+  const allowed = await loadAllowedSlugs(env, request);
+  if (allowed && !allowed.has(slug)) {
+    return json({ error: 'unknown slug' }, { status: 404 });
+  }
 
   let vid = getVisitorId(request);
   let setVid = null;
