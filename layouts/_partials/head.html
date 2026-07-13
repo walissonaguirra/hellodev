@@ -68,10 +68,10 @@
 
   {{ partial "schema.html" . }}
 
-  <link rel="preload" href="/fonts/charter-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/charter-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ (resources.Get "fonts/charter-regular.woff2" | resources.Fingerprint).RelPermalink }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ (resources.Get "fonts/charter-italic.woff2" | resources.Fingerprint).RelPermalink }}" as="font" type="font/woff2" crossorigin>
 
-  {{- $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+  {{- $css := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
   {{- $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint -}}
