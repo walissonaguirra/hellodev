@@ -626,28 +626,28 @@ About / bio
  */
 .terminal {
   display: none;
-  margin: 0 0 40px;
+  margin: 0 0 28px;
   border: 1px solid #e8e8e8;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: #fbfbfb;
   overflow: hidden;
   font-family: Monaco, Menlo, Consolas, "Courier New", DotumChe, monospace;
   font-size: 13px;
-  line-height: 1.6; }
+  line-height: 1.5; }
   .terminal.is-ready {
     display: block; }
 
 .terminal__bar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 6px;
+  padding: 5px 10px;
   border-bottom: 1px solid #e8e8e8;
   background-color: #f1f1f1; }
 
 .terminal__dot {
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: #cfcfcf; }
   .terminal__dot:nth-child(1) {
@@ -658,7 +658,7 @@ About / bio
     background-color: #61c554; }
 
 .terminal__title {
-  margin-left: 6px;
+  margin-left: 4px;
   color: #828282;
   font-size: 12px;
   white-space: nowrap;
@@ -666,18 +666,18 @@ About / bio
   text-overflow: ellipsis; }
 
 .terminal__screen {
-  padding: 12px 14px; }
+  padding: 9px 11px; }
 
 .terminal__output {
-  max-height: 240px;
+  max-height: 180px;
   overflow: auto;
   white-space: pre-wrap;
   word-break: break-word; }
   .terminal__output:not(:empty) {
-    margin-bottom: 8px; }
+    margin-bottom: 6px; }
 
 .terminal__row {
-  min-height: 1.6em; }
+  min-height: 1.5em; }
 
 .terminal__row--echo {
   color: #555; }
@@ -685,7 +685,7 @@ About / bio
 .terminal__line {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 6px;
   cursor: text; }
 
 .terminal__prompt {
@@ -718,7 +718,7 @@ About / bio
 
 @media screen and (max-width: 600px) {
   .terminal__output {
-    max-height: 200px; }
+    max-height: 150px; }
   .terminal__title {
     font-size: 11px; } }
 
