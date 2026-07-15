@@ -553,6 +553,26 @@ header > .wrapper {
   overflow: hidden;
   white-space: nowrap; }
 
+/**
+ * Pular para o conteúdo — visível apenas com foco de teclado.
+ */
+.skip-link,
+.skip-link:link,
+.skip-link:visited {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 10px 16px;
+  border-radius: 0 0 6px 0;
+  background-color: #d9230f;
+  color: #fff;
+  font-size: calc(0.95rem * var(--font-scale, 1));
+  text-decoration: none;
+  transform: translateY(-100%); }
+  .skip-link:focus {
+    transform: translateY(0); }
+
 hr {
   height: 1px;
   margin: 15px 0;
@@ -749,6 +769,12 @@ About / bio
     color: #cfcfcf; }
   .site-nav .page-link {
     color: #dcdcdc; }
+
+  .skip-link,
+  .skip-link:link,
+  .skip-link:visited {
+    background-color: #f15a47;
+    color: #1b1b1b; }
 
   .post-meta,
   .site-footer,

@@ -2,6 +2,8 @@
 <html lang="{{ site.Language.Lang }}">
 {{ partial "head.html" . }}
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
   {{ partial "header.html" . }}
 
   <aside class="font-size-controls" role="group" aria-label="Ajustar o tamanho da fonte">
@@ -10,7 +12,7 @@
     <button type="button" class="font-size-btn font-size-btn--decrease" data-font-size="decrease" aria-label="Diminuir o tamanho da fonte">A</button>
   </aside>
 
-  <main class="page-content" aria-label="Content">
+  <main id="conteudo" class="page-content" aria-label="Content">
     <div class="wrapper">
       {{ block "main" . }}{{ end }}
     </div>
