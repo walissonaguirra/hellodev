@@ -895,6 +895,13 @@ About / bio
  * Terminal — contraparte para o modo escuro.
  */
 @media (prefers-color-scheme: dark) {
+  .post-item__thumb {
+    border-color: #333; }
+
+  .post-item__desc {
+    color: #9a9a9a; } }
+
+@media (prefers-color-scheme: dark) {
   .terminal {
     border-color: #333;
     background-color: #242424; }
