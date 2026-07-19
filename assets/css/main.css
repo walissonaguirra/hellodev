@@ -540,28 +540,14 @@ header > .wrapper {
   margin-bottom: 4px; }
 
 /**
- * Listagem de posts da home: thumb + título + prévia da descrição.
+ * Listagem de posts da home: título + prévia da descrição.
  */
 .post-list {
   margin-left: 0;
   list-style: none; }
 
 .post-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
   margin-bottom: 22px; }
-
-.post-item__thumb-link {
-  flex: 0 0 auto;
-  display: block;
-  line-height: 0; }
-
-.post-item__thumb {
-  width: 140px;
-  height: auto;
-  border: 1px solid #e8e8e8;
-  border-radius: 6px; }
 
 .post-item__body {
   min-width: 0; }
@@ -571,13 +557,6 @@ header > .wrapper {
   font-size: calc(0.95rem * var(--font-scale, 1));
   line-height: 1.45;
   color: #828282; }
-
-@media screen and (max-width: 800px) {
-  .post-item {
-    gap: 12px; }
-
-  .post-item__thumb {
-    width: 96px; } }
 
 .year-heading {
   font-size: calc(1.7rem * var(--font-scale, 1)); }
@@ -895,9 +874,6 @@ About / bio
  * Terminal — contraparte para o modo escuro.
  */
 @media (prefers-color-scheme: dark) {
-  .post-item__thumb {
-    border-color: #333; }
-
   .post-item__desc {
     color: #9a9a9a; } }
 

@@ -37,14 +37,7 @@
     <h2 class="year-heading" id="{{ .Key }}-ref">{{ .Key }}</h2>
     <ul class="post-list">
       {{- range .Pages }}
-      {{- $thumb := (partial "og-image.html" .).Resize "280x webp q75" }}
       <li class="post-item">
-        {{/* Thumb é decorativa: fora da ordem de tabulação para não duplicar o link do título. */}}
-        <a class="post-item__thumb-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-          <img class="post-item__thumb" src="{{ $thumb.RelPermalink }}"
-               width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
-               alt="" loading="lazy" decoding="async">
-        </a>
         <div class="post-item__body">
           <h3 class="post-title-custom">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
