@@ -685,18 +685,6 @@ About / bio
   border-bottom: 1px solid #e8e8e8;
   background-color: #f1f1f1; }
 
-.terminal__dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #cfcfcf; }
-  .terminal__dot:nth-child(1) {
-    background-color: #ec6a5e; }
-  .terminal__dot:nth-child(2) {
-    background-color: #f4be4f; }
-  .terminal__dot:nth-child(3) {
-    background-color: #61c554; }
-
 .terminal__title {
   margin-left: 4px;
   color: #828282;
