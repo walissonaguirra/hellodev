@@ -35,12 +35,24 @@
   {{- $byYear := $posts.GroupByDate "2006" -}}
   {{- range $byYear }}
     <h2 class="year-heading" id="{{ .Key }}-ref">{{ .Key }}</h2>
-    <ul>
+    <ul class="post-list">
       {{- range .Pages }}
-      <li>
-        <h3 class="post-title-custom">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
+      {{- $thumb := (partial "og-image.html" .).Resize "280x webp q75" }}
+      <li class="post-item">
+        {{/* Thumb é decorativa: fora da ordem de tabulação para não duplicar o link do título. */}}
+        <a class="post-item__thumb-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+          <img class="post-item__thumb" src="{{ $thumb.RelPermalink }}"
+               width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+               alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="post-item__body">
+          <h3 class="post-title-custom">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+          {{- with .Description }}
+          <p class="post-item__desc">{{ truncate 120 . }}</p>
+          {{- end }}
+        </div>
       </li>
       {{- end }}
     </ul>
